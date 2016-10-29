@@ -1,0 +1,99 @@
+﻿@{
+    var url = Request.Url.LocalPath;
+
+
+    //系统设置
+    if (url.Contains("/Admin/Config/Config"))
+    {
+        <h1 class="page-title">
+            系统设置<small> 本页面用于进行系统配置，该功能是系统稳定运行的重要基石，请慎重配置。</small>
+        </h1>
+        <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li>
+                    <i class="icon-home"></i>
+                    <a href="@Url.Action("Index", "Home")">首页</a>
+                    <i class="fa fa-angle-right"></i>
+                </li>
+                <li><a href="@Url.Action("Index","Config")">系统设置</a></li>
+            </ul>
+            <div class="page-toolbar">
+                <div class="btn-group pull-right">
+                    <button type="button" class="btn btn-fit-height grey-salt dropdown-toggle">
+                        当前位置
+                        <i class="fa fa-angle-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        return;
+    }
+
+
+    //系统设置 - 人员类别管理
+    if (url.Contains("/Admin/Config/UserType"))
+    {
+        <h1 class="page-title">人员类别管理<small>人员类别用于标识不同身份的用户。在统计人员总数或是业务流程检测中需要调用本处设置。请慎重修改！</small></h1>
+        <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li>
+                    <i class="icon-home"></i><a href="/Admin/Home/Index">Home</a><i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                    <i class="fa fa-cog"></i><a href="/Admin/Config/Home/Index">Home</a><span>系统设置</span><i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                    <i class="icon-user"></i><a href="/Admin/Config/UserType/Index">人员类别管理</a>
+                </li>
+            </ul>
+            <div class="page-toolbar">
+                <div class="btn-group pull-right">
+                    <button type="button" class="btn btn-fit-height grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+                        快速导航
+                        <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                        <li>
+                            <a href="/Admin/Config/System/Index">
+                                <i class="fa fa-cogs"></i>系统环境配置
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/Config/Organization/Index">
+                                <i class="fa fa-share-alt"></i>组织机构管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/Config/Message/Index">
+                                <i class="fa fa-bell-o"></i>消息提醒设置
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/Config/CaseType/Index">
+                                <i class="icon-docs"></i>案件类别管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/Config/Court/Index">
+                                <i class="fa fa-bank"></i>法院管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/Config/Region/Index">
+                                <i class="fa fa-map-o"></i>地域管理
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/Admin/Config/Home/Index">
+                                <i class="fa fa-cog"></i>系统设置
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        return;
+    }
+
+}

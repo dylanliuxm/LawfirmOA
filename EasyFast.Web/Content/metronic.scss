@@ -1,0 +1,30 @@
+﻿/*此处是对Metronic4.7.1的修改定制*/
+
+
+/*面包屑导航设置*/
+.page-container-bg-solid{
+    .page-title{
+        small{
+            padding-left:8px;
+            color:#888;
+        }
+    }
+}
+
+.page-bar{
+    line-height:20px;
+    .page-toolbar{
+        i{
+            margin-right:10px;
+        }
+    }
+}
+
+
+
+
+.page-content-wrapper{
+    .page-content{
+        padding-bottom:30px;
+    }
+}
