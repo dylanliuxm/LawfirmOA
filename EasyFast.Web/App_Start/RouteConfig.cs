@@ -21,7 +21,7 @@ namespace EasyFast.Web
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                namespaces: new string[] { "EasyFast.Web.Controller" }
+                namespaces: new string[] { "EasyFast.Web.Controllers" }
             );
         }
     }

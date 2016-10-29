@@ -42,7 +42,6 @@ namespace EasyFast.EntityFramework.EntityFramework
         }
 
         #region
-        public virtual IDbSet<User> User { set; get; }
         public virtual IDbSet<UserType> UserType { set; get; }
         #endregion
 

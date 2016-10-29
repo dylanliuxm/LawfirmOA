@@ -124,6 +124,10 @@
     <Compile Include="Migrations\201610281401261_Init.Designer.cs">
       <DependentUpon>201610281401261_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610291547050_UserType.cs" />
+    <Compile Include="Migrations\201610291547050_UserType.Designer.cs">
+      <DependentUpon>201610291547050_UserType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="EasyFastDataModule.cs" />
     <Compile Include="Migrations\SeedData\DefaultEditionsCreator.cs" />
@@ -148,6 +152,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610281401261_Init.resx">
       <DependentUpon>201610281401261_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610291547050_UserType.resx">
+      <DependentUpon>201610291547050_UserType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

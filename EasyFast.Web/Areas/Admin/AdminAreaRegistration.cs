@@ -22,7 +22,8 @@ namespace EasyFast.Web.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+                new string[] { "EasyFast.Web.Areas.Admin.Controllers" }
             );
         }
     }
