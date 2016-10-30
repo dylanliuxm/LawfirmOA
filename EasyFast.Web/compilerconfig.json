@@ -2,5 +2,9 @@
   {
     "outputFile": "Content/site.css",
     "inputFile": "Content/site.scss"
+  },
+  {
+    "outputFile": "Content/cnblogs.css",
+    "inputFile": "Content/cnblogs.scss"
   }
 ]
