@@ -1,0 +1,81 @@
+﻿/*博客园样式代码*/
+
+
+/*颜色变量*/
+$color_yellow_light:#FF8B3D;
+$color_yellow_dark:#FF6700;
+
+
+
+/*通用设置*/
+body{
+    background: #f3f3f3;
+    font-size: 14px;
+    font-family: arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+a{
+    color:#333;
+    &:hover{
+        color:$color_yellow_dark;
+        text-decoration:underline;
+        -moz-transition:color .3s linear;
+        -webkit-transition:color .3s linear;
+        -o-transition:color .3s linear;
+        transition:color .3s linear;
+    }
+}
+
+
+
+#navigator{
+    background:rgba(0,0,0,0.67);
+    color:#FFF;
+    >ul>li>a{
+        color:#FFF;
+        &:link{
+            color:#FFF;
+        }
+        &:hover{
+            color:$color_yellow_dark !important;
+        }
+        &:visited{
+            color:#FFF;
+        }
+    }
+    #blog_stats{
+        color:#FFF;
+    }
+}
+
+
+
+#cnblogs_post_body{
+    h2{
+        background:#A8A8A8;
+        padding:8px 0 8px 10px;
+        margin:20px auto 40px auto;
+        font-size:1.4em;
+        border-radius:3px;
+        color:#FFF;
+    }
+}
+
+
+
+#blog-sidecolumn{
+    .sidebar-block{
+        h3{
+            background:$color_yellow_dark;
+            color:#FFF;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom:$color_yellow_dark solid 1px;
+            padding:7px 5px 5px;
+        }
+        ul{
+            background:#FFF;
+        }
+    }
+}

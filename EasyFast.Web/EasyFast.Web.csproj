@@ -312,6 +312,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\cnblogs.css">
+      <DependentUpon>cnblogs.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\cnblogs.min.css">
+      <DependentUpon>cnblogs.css</DependentUpon>
+    </Content>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\site.css">
@@ -416,6 +422,7 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="Content\cnblogs.scss" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
