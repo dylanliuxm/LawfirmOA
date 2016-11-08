@@ -318,6 +318,12 @@
     <Content Include="Content\cnblogs.min.css">
       <DependentUpon>cnblogs.css</DependentUpon>
     </Content>
+    <Content Include="Content\easyui.custom.css">
+      <DependentUpon>easyui.custom.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\easyui.custom.min.css">
+      <DependentUpon>easyui.custom.css</DependentUpon>
+    </Content>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\site.css">
@@ -418,11 +424,15 @@
     <Content Include="Content\metronic.scss" />
     <Content Include="Areas\Admin\Views\Shared\_Breadcrumb.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Iframe.cshtml" />
+    <Content Include="Areas\Admin\Views\Config\UserType\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Config\UserType\Update.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="Content\cnblogs.scss" />
+    <Content Include="Content\easyui.custom.scss" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -453,6 +463,7 @@
     <Content Include="Scripts\others\spinjs\spin.js" />
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\json2.min.js" />
+    <Content Include="Scripts\site.js" />
     <Content Include="Scripts\sweetalert\ie9.css" />
     <Content Include="Scripts\sweetalert\sweet-alert.css" />
     <Content Include="Scripts\sweetalert\sweet-alert.html" />
@@ -518,7 +529,9 @@
     <Compile Include="Views\UrlChecker.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Shared\_TopBar.cshtml" />
@@ -565,6 +578,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Config\Home\" />
+    <Folder Include="Areas\Admin\Views\UserType\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

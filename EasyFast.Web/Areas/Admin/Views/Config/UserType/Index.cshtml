@@ -1,1 +1,113 @@
-﻿
+﻿@model EasyFast.Application.UserType.Dto.UserTypeInput
+
+<div class="row opt">
+    <div class="col-md-12">
+        <div class="">
+            <button id="add" class="btn green opt"><i class="fa fa-plus-square"></i>新建类别</button>
+            <button id="update" class="btn blue opt"><i class="fa fa-edit"></i>编辑选中</button>
+            <button id="del" class="btn red opt"><i class="fa fa-remove"></i>删除选中</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table id="easyui-datagrid" class="easyui-datagrid" data-options="
+               method: 'post',
+               pagination: true,
+               rownumbers: true,
+               pageSize: 20,
+               idField:'Id',
+               sortable:true
+               ">
+            <thead>
+                <tr>
+                    <th data-options="field:'ck',checkbox:true"></th>
+                    <th data-options="field:'id',width:100,sortable: true">ID</th>
+                    <th data-options="field:'name',width:300,sortable: true">人员类别名称</th>
+                    <th data-options="field:'orderId',width:100,sortable: true">排序</th>
+                    <th data-options="field:'userCount',width:100,sortable: true">人数</th>
+                    <th data-options="field:'remarks',width:300,sortable: true">备注信息</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+
+
+@section scripts {
+    <script>
+        $(function () {
+            $('#easyui-datagrid').datagrid({
+                url: "@Url.Action("GetDataGrid")",
+                queryParams :{'abp.security.antiForgery.tokenHeaderName':abp.security.antiForgery.getToken()},
+                loadFilter: function (data) {
+                    return data.result;
+                }
+            });
+
+            $("#add").click(function () {
+                layer.open({
+                    skin: "layui-layer-lan",
+                    type: 2,
+                    title: '<i class="fa fa-user"></i> 新建人员类别',
+                    maxmin: true,
+                    shadeClose: true,
+                    area: ['600px', '320px'],
+                    content: '@Url.Action("Add","UserType")'
+                });
+            });
+
+            $("#update").click(function () {
+                var ids = GetDataGridChecked();
+                if (CheckDataGridIsSingleRow(ids)) {
+                    if (ids != undefined) {
+                        layer.open({
+                            skin: "layui-layer-lan",
+                            type: 2,
+                            title: '编辑人员类别',
+                            maxmin: true,
+                            shadeClose: true,
+                            area: ['600px', '320px'],
+                            content: '/Admin/Config/UserType/Update/'+ids
+                        });
+                    }
+                }
+            });
+
+            $("#del").click(function () {
+                var ids = GetDataGridChecked();
+                var postData = "";
+                jQuery.each(ids, function (index, id) {
+                    postData += "&id[" + index + "]=" + id;
+                });
+                if (CheckDataGridHasSelectedRow(ids)) {
+                    swal({
+                        title: "您确定删除吗？",
+                        text: "删除数据后不可恢复，请谨慎操作！",
+                        type: "warning",
+                        showCancelButton: true,
+                        cancelButtonText: "取消",
+                        confirmButtonText: "确认",
+                        closeOnConfirm: false,
+                        html: false
+                    }, function (isConfirm) {
+                        if (isConfirm == true) {
+                            abp.ajax({
+                                url: "@Url.Action("Delete")",
+                                data: JSON.stringify(ids)
+                            }).done(function (data) {
+                                $('#easyui-datagrid').datagrid('reload');
+                                abp.notify.success('删除成功');
+                                swal("选中数据已经删除!", "选中的数据已彻底删除且不可恢复。", "success");
+                            });
+
+                        } else {
+                            swal("数据未进行任何更改！", "您的删除操作已撤销，系统数据未进行任何更改！", "success");
+                        }
+                    });
+                }
+            });
+        })
+    </script>
+}

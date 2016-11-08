@@ -89,6 +89,10 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Extend, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Extend.1.0.1\lib\net45\System.Extend.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
       <Private>True</Private>
@@ -102,6 +106,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoMapper\AutoMapperConfig.cs" />
+    <Compile Include="EasyUIHelper\EasyUIDataGrid.cs" />
+    <Compile Include="EasyUIHelper\EasyUIPager.cs" />
     <Compile Include="EasyFastApplicationModule.cs" />
     <Compile Include="EasyFastAppServiceBase.cs" />
     <Compile Include="MultiTenancy\Dto\CreateTenantInput.cs" />
@@ -122,6 +129,12 @@
     <Compile Include="Users\Dto\ProhibitPermissionInput.cs" />
     <Compile Include="Users\UserAppService.cs" />
     <Compile Include="Users\Dto\UserListDto.cs" />
+    <Compile Include="UserType\Dto\UserTypeInput.cs" />
+    <Compile Include="UserType\Dto\UserTypeDataGridDto.cs" />
+    <Compile Include="UserType\Dto\UserTypeListInput.cs" />
+    <Compile Include="UserType\Dto\UserTypeSearch.cs" />
+    <Compile Include="UserType\IUserTypeAppService.cs" />
+    <Compile Include="UserType\UserTypeAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -135,6 +148,7 @@
       <Name>EasyFast.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

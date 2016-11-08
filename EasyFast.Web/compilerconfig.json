@@ -6,5 +6,9 @@
   {
     "outputFile": "Content/cnblogs.css",
     "inputFile": "Content/cnblogs.scss"
+  },
+  {
+    "outputFile": "Content/easyui.custom.css",
+    "inputFile": "Content/easyui.custom.scss"
   }
 ]

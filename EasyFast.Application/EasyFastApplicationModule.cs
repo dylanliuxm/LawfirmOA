@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Abp.AutoMapper;
 using Abp.Modules;
+using EasyFast.Application.AutoMapper;
 
 namespace EasyFast.Application
 {
@@ -11,6 +12,7 @@ namespace EasyFast.Application
         {
             Configuration.Modules.AbpAutoMapper().Configurators.Add(mapper =>
             {
+                AutoMapperConfig.Bind(mapper);
                 //Add your custom AutoMapper mappings here...
                 //mapper.CreateMap<,>()
             });

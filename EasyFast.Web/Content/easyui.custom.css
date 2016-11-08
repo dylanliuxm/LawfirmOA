@@ -1,0 +1,16 @@
+﻿@charset "UTF-8";
+/*此文件为针对easyui.bootsrap默认样式的自定义修改*/
+.datagrid .datagrid-header .datagrid-header-inner .datagrid-cell {
+  height: 34px;
+  line-height: 34px;
+  padding: 0 6px; }
+  .datagrid .datagrid-header .datagrid-header-inner .datagrid-cell span {
+    font-size: 14px;
+    font-weight: bold; }
+
+.datagrid .datagrid-body .datagrid-row {
+  height: 32px; }
+  .datagrid .datagrid-body .datagrid-row > td > div {
+    padding: 0 6px;
+    font-size: 14px; }
+

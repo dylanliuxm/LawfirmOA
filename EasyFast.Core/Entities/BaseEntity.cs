@@ -13,12 +13,19 @@ namespace EasyFast.Core.Entities
     {
         public BaseEntity()
         {
-            OrderId = 9999;
+            OrderId = 999;
+            Guid = Guid.NewGuid();
         }
 
         /// <summary>
-        /// 排序Id，默认倒序排列
+        /// model的Guid，用于记录操作日志
         /// </summary>
+        public Guid Guid { get; set; }
+
+        /// <summary>
+        /// 排序Id
+        /// </summary>
+        [Range(1,999)]
         public int OrderId { get; set; }
 
         /// <summary>
