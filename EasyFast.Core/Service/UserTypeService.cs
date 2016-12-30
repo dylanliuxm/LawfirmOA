@@ -44,5 +44,21 @@ namespace EasyFast.Core.Service
         {
             return UserTypeRepository.GetAll().Any(o => o.Name == name && o.Id != id);
         }
+
+        public void Delete(long oldId, long newId)
+        {
+            var list = UserTypeRepository.FirstOrDefault(oldId).User.ToList();
+            if (list.Any())
+            {
+                lock (lockHelper)
+                {
+                    foreach (var item in list)
+                    {
+                        item.UserTypeId = newId;
+                    }
+                }
+            }
+            UserTypeRepository.Delete(oldId);
+        }
     }
 }

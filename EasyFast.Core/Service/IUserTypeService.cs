@@ -23,6 +23,7 @@ namespace EasyFast.Core.Service
         /// <param name="model">Model.UserType</param>
         /// <returns>0:重名。>0:Model.UserType.Id</returns>
         long Update(UserType model);
+
         /// <summary>
         /// 检测是否重名
         /// </summary>
@@ -30,5 +31,12 @@ namespace EasyFast.Core.Service
         /// <param name="name">Model.UserType.Name</param>
         /// <returns>true:存在重名数据。false:不存在重名数据</returns>
         bool CheckName(long id, string name);
+
+        /// <summary>
+        /// 将指定人员类别下的全部人员转移到新的类别下，然后软删除旧的类别
+        /// </summary>
+        /// <param name="oldId"></param>
+        /// <param name="newId"></param>
+        void Delete(long oldId, long newId);
     }
 }

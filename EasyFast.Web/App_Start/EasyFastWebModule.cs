@@ -12,6 +12,7 @@ using EasyFast.Api;
 using Hangfire;
 using EasyFast.EntityFramework;
 using EasyFast.Application;
+using Abp.Configuration.Startup;
 
 namespace EasyFast.Web
 {
@@ -31,6 +32,8 @@ namespace EasyFast.Web
 
             //Configure navigation/menu
             Configuration.Navigation.Providers.Add<EasyFastNavigationProvider>();
+
+            Configuration.Modules.AbpWebCommon().SendAllExceptionsToClients = true;
 
             //Configure Hangfire - ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
             //Configuration.BackgroundJobs.UseHangfire(configuration =>

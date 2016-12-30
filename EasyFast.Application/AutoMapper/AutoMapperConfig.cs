@@ -12,11 +12,13 @@ namespace EasyFast.Application.AutoMapper
     {
         public static void Bind(IMapperConfigurationExpression opt)
         {
-            opt.CreateMap<Core.Entities.UserType,UserTypeInput>();
+            #region UserType
+            opt.CreateMap<Core.Entities.UserType, UserTypeInput>();
             opt.CreateMap<UserTypeInput, Core.Entities.UserType>()
                 .ForMember(d => d.User, s => s.Ignore());
             opt.CreateMap<Core.Entities.UserType, UserTypeDataGridDto>()
                 .ForMember(d => d.UserCount, s => s.MapFrom(o => o.User.Count));
+            #endregion
 
             //Mapper.AssertConfigurationIsValid();//验证所有的映射配置是否都正常
         }

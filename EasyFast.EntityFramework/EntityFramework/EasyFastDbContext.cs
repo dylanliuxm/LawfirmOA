@@ -6,6 +6,9 @@ using EasyFast.Core.Users;
 using System.Data.Entity;
 using EasyFast.Core.Entities;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Data.Entity.Validation;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace EasyFast.EntityFramework.EntityFramework
 {
@@ -40,6 +43,36 @@ namespace EasyFast.EntityFramework.EntityFramework
         {
 
         }
+
+        #region EntityFramework并发冲突检测
+        public override int SaveChanges()
+        {
+            try
+            {
+                ApplyAbpConcepts();
+                return base.SaveChanges();
+            }
+            catch (DbEntityValidationException ex)
+            {
+                LogDbEntityValidationException(ex);
+                throw;
+            }
+        }
+
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken)
+        {
+            try
+            {
+                ApplyAbpConcepts();
+                return await base.SaveChangesAsync(cancellationToken);
+            }
+            catch (DbEntityValidationException ex)
+            {
+                LogDbEntityValidationException(ex);
+                throw;
+            }
+        }
+        #endregion
 
         #region
         public virtual IDbSet<UserType> UserType { set; get; }

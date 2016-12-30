@@ -63,19 +63,9 @@ namespace EasyFast.Web.Controllers
 
         #region Login / Logout
 
-        public ActionResult Login(string returnUrl = "")
+        public ActionResult Login()
         {
-            if (string.IsNullOrWhiteSpace(returnUrl))
-            {
-                returnUrl = Request.ApplicationPath;
-            }
-
-            return View(
-                new LoginFormViewModel
-                {
-                    ReturnUrl = returnUrl,
-                    IsMultiTenancyEnabled = _multiTenancyConfig.IsEnabled
-                });
+            return View();
         }
 
         [HttpPost]

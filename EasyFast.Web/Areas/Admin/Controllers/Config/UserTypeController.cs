@@ -78,5 +78,16 @@ namespace EasyFast.Web.Areas.Admin.Controllers.Config
             var data = _userTypeAppService.GetDataGrid(model);
             return Json(data);
         }
+
+        [HttpPost]
+        public JsonResult CheckIsHaveUser(long[] ids)
+        {
+            return Json(_userTypeAppService.CheckIsHaveUser(ids));
+        }
+
+        public ActionResult Delete(string ids)
+        {
+            return View();
+        }
     }
 }

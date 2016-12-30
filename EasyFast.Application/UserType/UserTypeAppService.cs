@@ -52,5 +52,15 @@ namespace EasyFast.Application.UserType
                 .Skip((search.Page - 1) * search.Rows).Take(search.Rows).ToList();
             return new EasyUIDataGrid<UserTypeDataGridDto> { total = total, rows = rows };
         }
+
+        public bool CheckIsHaveUser(long[] ids)
+        {
+            return _userTypeRepository.GetAllIncluding(o => o.User).Where(o => ids.Contains(o.Id)).Any(o => o.User != null);
+        }
+
+        public void Delete(DeleteInput model)
+        {
+            _userTypeService.Delete(model.OldId, model.NewId);
+        }
     }
 }

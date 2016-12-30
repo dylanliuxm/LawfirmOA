@@ -32,13 +32,13 @@ Date.prototype.format = function (fmt) { //author: meizz
     };
     if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
     for (var k in o)
-        if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
     return fmt;
 }
 var EasyUI = {
     //EasyUI用DataGrid用日期格式化
     TimeFormatter: function (value, rec, index) {
-        if (value == undefined) {
+        if (value === undefined) {
             return "";
         }
         /*json格式时间转js时间格式*/
@@ -52,7 +52,7 @@ var EasyUI = {
         return val.substr(11, 5);
     },
     DateTimeFormatter: function (value, rec, index) {
-        if (value == undefined) {
+        if (value === undefined) {
             return "";
         }
         /*json格式时间转js时间格式*/
@@ -68,7 +68,7 @@ var EasyUI = {
 
     //EasyUI用DataGrid用日期格式化
     DateFormatter: function (value, rec, index) {
-        if (value == undefined) {
+        if (value === undefined) {
             return "";
         }
         /*json格式时间转js时间格式*/
@@ -83,6 +83,52 @@ var EasyUI = {
     },
 };
 /*****EasyUI自定义扩展结束*****/
+
+
+/*****EasyUI专用方法开始*****/
+//获取指定ID的DataGrid中的选中行,返回ID数组.
+function GetDataGridChecked(domId) {
+    if (domId === null || domId === undefined) {
+        domId = "easyui-datagrid";
+    }
+    var ss = [];
+    var rows = $('#' + domId).datagrid('getSelections');
+    for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        ss.push(row.id);
+    }
+    return ss;
+}
+
+//判断DataGrid是否选了单行,本代码依赖于sweetAlert
+function CheckDataGridIsSingleRow(id) {
+    var isOK = true;
+    if (id === undefined || id === "" || id.length !== 1) {
+        isOK = false;
+        sweetAlert("发生了一个错误。", "只能选择一行数据进行操作!", "error");
+    }
+    return isOK;
+}
+
+//判断DataGrid是否至少选择了一行,本代码依赖于sweetAlert
+function CheckDataGridHasSelectedRow(id) {
+    var isOK = true;
+    if (id === undefined || id === "" || id.length < 1) {
+        isOK = false;
+        sweetAlert("发生了一个错误。", "请至少选择一行数据进行操作!", "error");
+    }
+    return isOK;
+}
+
+//刷新DataGrid
+function ReLoadDataGrid(domId) {
+    if (domId === null || domId === undefined) {
+        domId = "easyui-datagrid";
+    }
+    $('#' + domId).datagrid('reload');
+
+}
+/*****EasyUI专用方法结束*****/
 
 
 
@@ -132,50 +178,7 @@ function CloseAllWindosFromLayer(text, type, domId) {
 /*****关闭弹窗，并提示操作结果结束*****/
 
 
-/*****EasyUI专用方法开始*****/
-//获取指定ID的DataGrid中的选中行,返回ID数组.
-function GetDataGridChecked(domId) {
-    if (domId == null || domId == undefined) {
-        domId = "easyui-datagrid";
-    }
-    var ss = [];
-    var rows = $('#' + domId).datagrid('getSelections');
-    for (var i = 0; i < rows.length; i++) {
-        var row = rows[i];
-        ss.push(row.id);
-    }
-    return ss;
-}
 
-//判断DataGrid是否选了单行,本代码依赖于sweetAlert
-function CheckDataGridIsSingleRow(id) {
-    var isOK = true;
-    if (id == undefined || id == "" || id.length != 1) {
-        isOK = false;
-        sweetAlert("发生了一个错误。", "只能选择一行数据进行操作!", "error");
-    }
-    return isOK;
-}
-
-//判断DataGrid是否至少选择了一行,本代码依赖于sweetAlert
-function CheckDataGridHasSelectedRow(id) {
-    var isOK = true;
-    if (id == undefined || id == "" || id.length < 1) {
-        isOK = false;
-        sweetAlert("发生了一个错误。", "请至少选择一行数据进行操作!", "error");
-    }
-    return isOK;
-}
-
-//刷新DataGrid
-function ReLoadDataGrid(domId) {
-    if (domId == null || domId == undefined) {
-        domId = "easyui-datagrid";
-    }
-    $('#' + domId).datagrid('reload');
-
-}
-/*****EasyUI专用方法结束*****/
 
 
 

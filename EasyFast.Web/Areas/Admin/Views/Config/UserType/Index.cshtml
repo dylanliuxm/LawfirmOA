@@ -33,7 +33,13 @@
     </div>
 </div>
 
-
+<div class="row" id="checkPassword" style="display:none">
+    <div class="col-md-12">
+        <form action="@Url.Action("")" method="post">
+            <input type="password" name="Password" />
+        </form>
+    </div>
+</div>
 
 @section scripts {
     <script>
@@ -77,6 +83,24 @@
 
             $("#del").click(function () {
                 var ids = GetDataGridChecked();
+                if (CheckDataGridHasSelectedRow(ids)) {
+                    abp.ajax({
+                        url: "@Url.Action("CheckIsHaveUser")",
+                        data: JSON.stringify(ids)
+                    }).done(function (data) {
+                        if (date) {
+                            window.location.href = "";
+                        } else {
+
+                        }
+                        $('#easyui-datagrid').datagrid('reload');
+                        abp.notify.success('删除成功');
+                        swal("选中数据已经删除!", "选中的数据已彻底删除且不可恢复。", "success");
+                    });
+                }
+            });
+            $("#del1").click(function () {
+                var ids = GetDataGridChecked();
                 var postData = "";
                 jQuery.each(ids, function (index, id) {
                     postData += "&id[" + index + "]=" + id;
@@ -101,7 +125,6 @@
                                 abp.notify.success('删除成功');
                                 swal("选中数据已经删除!", "选中的数据已彻底删除且不可恢复。", "success");
                             });
-
                         } else {
                             swal("数据未进行任何更改！", "您的删除操作已撤销，系统数据未进行任何更改！", "success");
                         }
