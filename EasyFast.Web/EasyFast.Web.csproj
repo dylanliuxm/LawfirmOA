@@ -328,6 +328,17 @@
     </Content>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\images\login\login_bg1.jpg" />
+    <Content Include="Content\images\login\login_bg10.jpg" />
+    <Content Include="Content\images\login\login_bg2.jpg" />
+    <Content Include="Content\images\login\login_bg3.jpg" />
+    <Content Include="Content\images\login\login_bg4.jpg" />
+    <Content Include="Content\images\login\login_bg5.jpg" />
+    <Content Include="Content\images\login\login_bg6.jpg" />
+    <Content Include="Content\images\login\login_bg7.jpg" />
+    <Content Include="Content\images\login\login_bg8.jpg" />
+    <Content Include="Content\images\login\login_bg9.jpg" />
+    <Content Include="Content\images\logo.png" />
     <Content Include="Content\site.css">
       <DependentUpon>site.scss</DependentUpon>
     </Content>

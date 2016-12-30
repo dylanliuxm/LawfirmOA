@@ -616,3 +616,91 @@ Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
    在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
    在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 27
    在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
+DEBUG 2016-12-31 01:31:41,228 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 01:31:41,239 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 01:31:41,242 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,243 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,243 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,243 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:41,247 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 01:31:41,374 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 01:31:41,375 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 01:31:41,375 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 01:31:41,375 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 01:31:41,614 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:31:42,350 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 01:31:42,355 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 01:31:42,356 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 01:31:42,356 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 01:31:42,357 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 01:31:42,400 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 01:31:42,438 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 01:31:42,438 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 01:31:43,283 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 01:31:43,283 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 01:31:43,284 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 01:31:43,285 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 01:31:43,286 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-12-31 01:41:25,357 [59   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-12-31 01:41:25,358 [59   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 01:41:25,358 [59   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 01:41:25,358 [59   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-12-31 01:43:05,590 [49   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 01:43:05,657 [49   ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 01:43:05,660 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,661 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,661 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,661 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,661 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,663 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,663 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:05,664 [49   ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 01:43:05,876 [49   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 01:43:05,876 [49   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 01:43:05,876 [49   ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 01:43:05,876 [49   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 01:43:06,112 [49   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 01:43:06,397 [49   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 01:43:06,401 [49   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 01:43:06,401 [49   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 01:43:06,402 [49   ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 01:43:06,402 [49   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 01:43:06,442 [49   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 01:43:06,471 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 01:43:06,471 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 01:43:06,474 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 01:43:06,474 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 01:43:06,474 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 01:43:06,474 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 01:43:06,474 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 01:43:06,475 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 01:43:07,260 [49   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 01:43:07,261 [49   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 01:43:07,262 [49   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 01:43:07,263 [49   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 01:43:07,263 [49   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
