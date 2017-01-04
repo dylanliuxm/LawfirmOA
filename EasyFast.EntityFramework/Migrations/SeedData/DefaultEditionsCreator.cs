@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using Abp.Application.Editions;
-using EasyFast.Core.Editions;
 using EasyFast.EntityFramework;
-using EasyFast.Core.Editions;
 using EasyFast.EntityFramework.EntityFramework;
+using EasyFast.Core.Editions;
+using System;
 
 namespace EasyFast.EntityFramework.Migrations.SeedData
 {

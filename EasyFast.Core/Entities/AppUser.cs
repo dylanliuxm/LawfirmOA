@@ -36,6 +36,8 @@ namespace EasyFast.Core.Entities
                 UserName = AdminUserName,
                 Name = AdminUserName,
                 Surname = AdminUserName,
+                ContractBeginTime = DateTime.Now,
+                ContractEndTime = DateTime.MaxValue,
                 EmailAddress = emailAddress,
                 Password = new PasswordHasher().HashPassword(password)
             };

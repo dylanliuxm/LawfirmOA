@@ -2,7 +2,6 @@
 using Abp.Configuration;
 using Abp.Localization;
 using Abp.Net.Mail;
-using EasyFast.EntityFramework;
 using EasyFast.EntityFramework.EntityFramework;
 
 namespace EasyFast.EntityFramework.Migrations.SeedData

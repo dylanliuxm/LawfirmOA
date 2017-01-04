@@ -345,6 +345,12 @@
     <Content Include="Content\site.min.css">
       <DependentUpon>site.css</DependentUpon>
     </Content>
+    <Content Include="Content\system.css">
+      <DependentUpon>system.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\system.min.css">
+      <DependentUpon>system.css</DependentUpon>
+    </Content>
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -435,6 +441,10 @@
     <Content Include="Abp\Framework\styles\abp.mixings.css.map" />
     <Content Include="Abp\Framework\styles\abp.less" />
     <Content Include="Abp\Framework\styles\abp.css.map" />
+    <Content Include="Areas\System\Views\web.config" />
+    <Content Include="Areas\System\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\System\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\System\Views\Edition\Index.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -446,6 +456,7 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\system.scss" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -517,6 +528,10 @@
     <Compile Include="Areas\Admin\Controllers\Config\SystemController.cs" />
     <Compile Include="Areas\Admin\Controllers\Config\UserTypeController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\System\Controllers\EditionController.cs" />
+    <Compile Include="Areas\System\Controllers\HomeController.cs" />
+    <Compile Include="Areas\System\Controllers\TenantController.cs" />
+    <Compile Include="Areas\System\SystemAreaRegistration.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -592,6 +607,9 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Config\Home\" />
     <Folder Include="Areas\Admin\Views\UserType\" />
+    <Folder Include="Areas\System\Models\" />
+    <Folder Include="Areas\System\Views\Home\" />
+    <Folder Include="Areas\System\Views\Tenant\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

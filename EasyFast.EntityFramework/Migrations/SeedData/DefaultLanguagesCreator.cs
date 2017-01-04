@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Abp.Localization;
-using EasyFast.EntityFramework;
 using EasyFast.EntityFramework.EntityFramework;
 
 namespace EasyFast.EntityFramework.Migrations.SeedData
@@ -24,6 +23,8 @@ namespace EasyFast.EntityFramework.Migrations.SeedData
                 new ApplicationLanguage(null, "fr", "Français", "famfamfam-flag-fr"),
                 new ApplicationLanguage(null, "it", "Italiano", "famfamfam-flag-it"),
                 new ApplicationLanguage(null, "ja", "日本語", "famfamfam-flag-jp"),
+                new ApplicationLanguage(null, "nl-NL", "Nederlands", "famfamfam-flag-nl"),
+                new ApplicationLanguage(null, "lt", "Lietuvos", "famfamfam-flag-lt"),
             };
         }
 

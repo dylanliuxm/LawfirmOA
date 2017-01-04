@@ -84,7 +84,8 @@ namespace EasyFast.Web.Controllers
 
             if (string.IsNullOrWhiteSpace(returnUrl))
             {
-                returnUrl = Request.ApplicationPath;
+                //returnUrl = Request.ApplicationPath;
+                returnUrl = "/Admin/Home/Index";
             }
 
             if (!string.IsNullOrWhiteSpace(returnUrlHash))

@@ -27,11 +27,5 @@ namespace EasyFast.Core.Entities
         /// </summary>
         [Range(1,999)]
         public int OrderId { get; set; }
-
-        /// <summary>
-        /// 行号，用于乐观并发控制
-        /// </summary>
-        [Timestamp]
-        public byte[] RowVersion { get; set; }
     }
 }

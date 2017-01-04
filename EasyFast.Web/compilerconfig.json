@@ -10,5 +10,9 @@
   {
     "outputFile": "Content/easyui.custom.css",
     "inputFile": "Content/easyui.custom.scss"
+  },
+  {
+    "outputFile": "Content/system.css",
+    "inputFile": "Content/system.scss"
   }
 ]

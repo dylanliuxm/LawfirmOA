@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="renderer" content="webkit" />
+    <title>易迅律师事务所OA系统系统设置</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="http://cdn.easyfast.cn/assets/metronic4.7.1/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://cdn.easyfast.cn/assets/metronic4.7.1/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/system.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Home/Index">
+                    <img class="logo" src="~/Content/images/logo.png" alt="logo" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul id="nav" class="nav navbar-nav">
+                    <li class="active">
+                        <a href="@Url.Action("Index", "Home")">
+                            <i class="fa fa-home"></i> 首页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Edition")">
+                            <i class="fa fa-pie-chart"></i> 版本管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Tenant")" id="top_anthen_index">
+                            <i class="fa fa-id-card-o"></i> 租户管理
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("Add", "Case")"><i class="fa fa-plus" aria-hidden="true"></i> 新建案例</a></li>
+                    @*<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img class="header_img_25" src="~/Content/images/lawyer/notify.png" />
+                                <span></span>
+                            </a>
+                        </li>*@
+                    <li>
+                        <a href="@Url.Action("Index", "Profile")">
+                            <i class="fa fa-gear"></i>
+                            <span>个人设置</span>
+                        </a>
+                    </li>
+                    @*<li class="dropdown">
+                            <a href="@Url.Action("Profiles","Account")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img class="header_feedback" src="~/Content/images/lawyer/add_feedback.png" />
+                                <span></span>
+                            </a>
+                        </li>*@
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            @*@using JingShOnline.Common.Extensions
+                                <img src="@Context.User.GetUserInfo().Avatar" />
+                                @{var RealName = User.GetUserInfo().RealName; }
+                                <span>@(string.IsNullOrWhiteSpace(RealName) ? User.Identity.Name : RealName)</span>*@
+                        </a>
+                        <ul class="dropdown-menu">
+                            @*<li><a href="@Url.Action("Profiles","Account")"><i class="fa fa-user" style="padding-right:5px;"></i>个人设置</a></li>*@
+                            <li><a href="/Account/Logout"><i class="fa fa-power-off" style="padding-right:5px;"></i>退出登录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    @RenderBody()
+    <footer>
+        
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        北京京师律师事务所&nbsp;&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;京ICP备13018228号-1&nbsp;&nbsp;&nbsp;
+                        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1253255703'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s9.cnzz.com/stat.php%3Fid%3D1253255703' type='text/javascript'%3E%3C/script%3E"));</script>
+                        <span class="pull-right">
+                            Copyright©1994-2014 JINGSH ALL RIGHTS RECERVED
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -7,13 +7,13 @@ namespace EasyFast.EntityFramework.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AbpUsers : IMigrationMetadata
+    public sealed partial class Init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AbpUsers));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201612291601077_AbpUsers"; }
+            get { return "201612310749285_Init"; }
         }
         
         string IMigrationMetadata.Source

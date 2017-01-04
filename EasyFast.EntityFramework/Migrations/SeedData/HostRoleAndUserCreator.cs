@@ -3,13 +3,12 @@ using Abp.Authorization;
 using Abp.Authorization.Roles;
 using Abp.Authorization.Users;
 using Abp.MultiTenancy;
-using EasyFast.Core.Authorization;
-using EasyFast.Core.Authorization.Roles;
-using EasyFast.EntityFramework;
-using EasyFast.Core.Users;
 using Microsoft.AspNet.Identity;
 using EasyFast.EntityFramework.EntityFramework;
+using EasyFast.Core.Authorization;
 using EasyFast.Core.Entities;
+using EasyFast.Core.Authorization.Roles;
+using System;
 
 namespace EasyFast.EntityFramework.Migrations.SeedData
 {
@@ -70,6 +69,8 @@ namespace EasyFast.EntityFramework.Migrations.SeedData
                         Surname = "Administrator",
                         EmailAddress = "admin@aspnetboilerplate.com",
                         IsEmailConfirmed = true,
+                        ContractBeginTime=DateTime.Now,
+                        ContractEndTime=DateTime.MaxValue,
                         Password = new PasswordHasher().HashPassword(User.DefaultPassword)
                     });
 

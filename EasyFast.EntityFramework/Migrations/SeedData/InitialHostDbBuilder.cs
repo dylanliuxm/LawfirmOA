@@ -1,6 +1,5 @@
-﻿using EasyFast.EntityFramework;
+﻿using EntityFramework.DynamicFilters;
 using EasyFast.EntityFramework.EntityFramework;
-using EntityFramework.DynamicFilters;
 
 namespace EasyFast.EntityFramework.Migrations.SeedData
 {

@@ -1,418 +1,29 @@
-WARN  2016-12-30 00:01:19,656 [16   ] Abp.BackgroundJobs.BackgroundJobManager  - Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not instantiate EasyFast.EntityFramework.EntityFramework.EasyFastDbContext ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.InvalidOperationException: The model backing the 'EasyFastDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
-   在 System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
-   在 System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
-   在 System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
-   在 System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
-   在 System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
-   在 System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
-   在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
-   在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
-   在 System.Data.Entity.Internal.InternalContext.ForceOSpaceLoadingForKnownEntityTypes()
-   在 System.Data.Entity.DbContext.System.Data.Entity.Infrastructure.IObjectContextAdapter.get_ObjectContext()
-   在 Abp.EntityFramework.AbpDbContext.RegisterToChanges() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\AbpDbContext.cs:行号 141
-   在 Abp.Zero.EntityFramework.AbpZeroDbContext`3..ctor(String nameOrConnectionString) 位置 D:\Halil\Github\module-zero\src\Abp.Zero.EntityFramework\Zero\EntityFramework\AbpZeroDbContext.cs:行号 72
-   在 EasyFast.EntityFramework.EntityFramework.EasyFastDbContext..ctor(String nameOrConnectionString) 位置 D:\EasyFast\LawfirmOA\EasyFast.EntityFramework\EntityFramework\EasyFastDbContext.cs:行号 35
-   --- 内部异常堆栈跟踪的结尾 ---
-   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
-   在 System.Reflection.RuntimeConstructorInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.FastCreateInstance(Type implType, Object[] arguments, ConstructorCandidate constructor)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
-   --- 内部异常堆栈跟踪的结尾 ---
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
-   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
-   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
-   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
-   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
-   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
-   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
-   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
-   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
-   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
-   在 Castle.Windsor.WindsorContainer.Resolve(Type service, IDictionary arguments)
-   在 Castle.Windsor.WindsorContainer.Resolve(Type service, Object argumentsAsAnonymousType)
-   在 Abp.Dependency.IocManager.Resolve(Type type, Object argumentsAsAnonymousType) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Dependency\IocManager.cs:行号 207
-   在 Abp.EntityFramework.DefaultDbContextResolver.Resolve[TDbContext](String connectionString) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\DefaultDbContextResolver.cs:行号 30
-   在 Abp.EntityFramework.Uow.EfUnitOfWork.GetOrCreateDbContext[TDbContext](Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\EfUnitOfWork.cs:行号 118
-   在 Abp.EntityFramework.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork, Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\UnitOfWorkExtensions.cs:行号 38
-   在 Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1.GetDbContext(Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\UnitOfWorkDbContextProvider.cs:行号 33
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_get_Context_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context()
-   在 Abp.EntityFramework.Repositories.EfRepositoryBase`3.get_Table() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Repositories\EfRepositoryBaseOfTEntityAndTPrimaryKey.cs:行号 31
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_get_Table_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_GetAll_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll()
-   在 Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount) 位置 D:\Halil\Github\module-zero\src\Abp.Zero\BackgroundJobs\BackgroundJobStore.cs:行号 31
-   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync_callback(Int32 maxResultCount)
-   在 Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 62
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 41
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
-   在 Abp.BackgroundJobs.BackgroundJobManager.<DoWork>b__13_0() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
-   在 System.Threading.Tasks.Task`1.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
-   在 System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
-   在 Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
-   在 Abp.BackgroundJobs.BackgroundJobManager.DoWork() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
-   在 Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Threading\BackgroundWorkers\PeriodicBackgroundWorkerBase.cs:行号 48
-Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not instantiate EasyFast.EntityFramework.EntityFramework.EasyFastDbContext ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.InvalidOperationException: The model backing the 'EasyFastDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
-   在 System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
-   在 System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
-   在 System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
-   在 System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
-   在 System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
-   在 System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
-   在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
-   在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
-   在 System.Data.Entity.Internal.InternalContext.ForceOSpaceLoadingForKnownEntityTypes()
-   在 System.Data.Entity.DbContext.System.Data.Entity.Infrastructure.IObjectContextAdapter.get_ObjectContext()
-   在 Abp.EntityFramework.AbpDbContext.RegisterToChanges() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\AbpDbContext.cs:行号 141
-   在 Abp.Zero.EntityFramework.AbpZeroDbContext`3..ctor(String nameOrConnectionString) 位置 D:\Halil\Github\module-zero\src\Abp.Zero.EntityFramework\Zero\EntityFramework\AbpZeroDbContext.cs:行号 72
-   在 EasyFast.EntityFramework.EntityFramework.EasyFastDbContext..ctor(String nameOrConnectionString) 位置 D:\EasyFast\LawfirmOA\EasyFast.EntityFramework\EntityFramework\EasyFastDbContext.cs:行号 35
-   --- 内部异常堆栈跟踪的结尾 ---
-   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
-   在 System.Reflection.RuntimeConstructorInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.FastCreateInstance(Type implType, Object[] arguments, ConstructorCandidate constructor)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
-   --- 内部异常堆栈跟踪的结尾 ---
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
-   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
-   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
-   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
-   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
-   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
-   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
-   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
-   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
-   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
-   在 Castle.Windsor.WindsorContainer.Resolve(Type service, IDictionary arguments)
-   在 Castle.Windsor.WindsorContainer.Resolve(Type service, Object argumentsAsAnonymousType)
-   在 Abp.Dependency.IocManager.Resolve(Type type, Object argumentsAsAnonymousType) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Dependency\IocManager.cs:行号 207
-   在 Abp.EntityFramework.DefaultDbContextResolver.Resolve[TDbContext](String connectionString) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\DefaultDbContextResolver.cs:行号 30
-   在 Abp.EntityFramework.Uow.EfUnitOfWork.GetOrCreateDbContext[TDbContext](Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\EfUnitOfWork.cs:行号 118
-   在 Abp.EntityFramework.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork, Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\UnitOfWorkExtensions.cs:行号 38
-   在 Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1.GetDbContext(Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\UnitOfWorkDbContextProvider.cs:行号 33
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_get_Context_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context()
-   在 Abp.EntityFramework.Repositories.EfRepositoryBase`3.get_Table() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Repositories\EfRepositoryBaseOfTEntityAndTPrimaryKey.cs:行号 31
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_get_Table_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_GetAll_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll()
-   在 Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount) 位置 D:\Halil\Github\module-zero\src\Abp.Zero\BackgroundJobs\BackgroundJobStore.cs:行号 31
-   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync_callback(Int32 maxResultCount)
-   在 Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 62
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 41
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
-   在 Abp.BackgroundJobs.BackgroundJobManager.<DoWork>b__13_0() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
-   在 System.Threading.Tasks.Task`1.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
-   在 System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
-   在 Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
-   在 Abp.BackgroundJobs.BackgroundJobManager.DoWork() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
-   在 Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Threading\BackgroundWorkers\PeriodicBackgroundWorkerBase.cs:行号 48
-WARN  2016-12-30 00:01:24,758 [14   ] Abp.BackgroundJobs.BackgroundJobManager  - Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not instantiate EasyFast.EntityFramework.EntityFramework.EasyFastDbContext ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.InvalidOperationException: The model backing the 'EasyFastDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
-   在 System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
-   在 System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
-   在 System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
-   在 System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
-   在 System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
-   在 System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
-   在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
-   在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
-   在 System.Data.Entity.Internal.InternalContext.ForceOSpaceLoadingForKnownEntityTypes()
-   在 System.Data.Entity.DbContext.System.Data.Entity.Infrastructure.IObjectContextAdapter.get_ObjectContext()
-   在 Abp.EntityFramework.AbpDbContext.RegisterToChanges() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\AbpDbContext.cs:行号 141
-   在 Abp.Zero.EntityFramework.AbpZeroDbContext`3..ctor(String nameOrConnectionString) 位置 D:\Halil\Github\module-zero\src\Abp.Zero.EntityFramework\Zero\EntityFramework\AbpZeroDbContext.cs:行号 72
-   在 EasyFast.EntityFramework.EntityFramework.EasyFastDbContext..ctor(String nameOrConnectionString) 位置 D:\EasyFast\LawfirmOA\EasyFast.EntityFramework\EntityFramework\EasyFastDbContext.cs:行号 35
-   --- 内部异常堆栈跟踪的结尾 ---
-   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
-   在 System.Reflection.RuntimeConstructorInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.FastCreateInstance(Type implType, Object[] arguments, ConstructorCandidate constructor)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
-   --- 内部异常堆栈跟踪的结尾 ---
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
-   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
-   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
-   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
-   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
-   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
-   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
-   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
-   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
-   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
-   在 Castle.Windsor.WindsorContainer.Resolve(Type service, IDictionary arguments)
-   在 Castle.Windsor.WindsorContainer.Resolve(Type service, Object argumentsAsAnonymousType)
-   在 Abp.Dependency.IocManager.Resolve(Type type, Object argumentsAsAnonymousType) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Dependency\IocManager.cs:行号 207
-   在 Abp.EntityFramework.DefaultDbContextResolver.Resolve[TDbContext](String connectionString) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\DefaultDbContextResolver.cs:行号 30
-   在 Abp.EntityFramework.Uow.EfUnitOfWork.GetOrCreateDbContext[TDbContext](Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\EfUnitOfWork.cs:行号 118
-   在 Abp.EntityFramework.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork, Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\UnitOfWorkExtensions.cs:行号 38
-   在 Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1.GetDbContext(Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\UnitOfWorkDbContextProvider.cs:行号 33
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_get_Context_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context()
-   在 Abp.EntityFramework.Repositories.EfRepositoryBase`3.get_Table() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Repositories\EfRepositoryBaseOfTEntityAndTPrimaryKey.cs:行号 31
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_get_Table_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_GetAll_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll()
-   在 Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount) 位置 D:\Halil\Github\module-zero\src\Abp.Zero\BackgroundJobs\BackgroundJobStore.cs:行号 31
-   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync_callback(Int32 maxResultCount)
-   在 Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 62
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 41
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
-   在 Abp.BackgroundJobs.BackgroundJobManager.<DoWork>b__13_0() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
-   在 System.Threading.Tasks.Task`1.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
-   在 System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
-   在 Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
-   在 Abp.BackgroundJobs.BackgroundJobManager.DoWork() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
-   在 Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Threading\BackgroundWorkers\PeriodicBackgroundWorkerBase.cs:行号 48
-Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not instantiate EasyFast.EntityFramework.EntityFramework.EasyFastDbContext ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.InvalidOperationException: The model backing the 'EasyFastDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
-   在 System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
-   在 System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
-   在 System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
-   在 System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
-   在 System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
-   在 System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
-   在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
-   在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
-   在 System.Data.Entity.Internal.InternalContext.ForceOSpaceLoadingForKnownEntityTypes()
-   在 System.Data.Entity.DbContext.System.Data.Entity.Infrastructure.IObjectContextAdapter.get_ObjectContext()
-   在 Abp.EntityFramework.AbpDbContext.RegisterToChanges() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\AbpDbContext.cs:行号 141
-   在 Abp.Zero.EntityFramework.AbpZeroDbContext`3..ctor(String nameOrConnectionString) 位置 D:\Halil\Github\module-zero\src\Abp.Zero.EntityFramework\Zero\EntityFramework\AbpZeroDbContext.cs:行号 72
-   在 EasyFast.EntityFramework.EntityFramework.EasyFastDbContext..ctor(String nameOrConnectionString) 位置 D:\EasyFast\LawfirmOA\EasyFast.EntityFramework\EntityFramework\EasyFastDbContext.cs:行号 35
-   --- 内部异常堆栈跟踪的结尾 ---
-   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
-   在 System.Reflection.RuntimeConstructorInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.FastCreateInstance(Type implType, Object[] arguments, ConstructorCandidate constructor)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
-   --- 内部异常堆栈跟踪的结尾 ---
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
-   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
-   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
-   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
-   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
-   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
-   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
-   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
-   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
-   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
-   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
-   在 Castle.Windsor.WindsorContainer.Resolve(Type service, IDictionary arguments)
-   在 Castle.Windsor.WindsorContainer.Resolve(Type service, Object argumentsAsAnonymousType)
-   在 Abp.Dependency.IocManager.Resolve(Type type, Object argumentsAsAnonymousType) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Dependency\IocManager.cs:行号 207
-   在 Abp.EntityFramework.DefaultDbContextResolver.Resolve[TDbContext](String connectionString) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\DefaultDbContextResolver.cs:行号 30
-   在 Abp.EntityFramework.Uow.EfUnitOfWork.GetOrCreateDbContext[TDbContext](Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\EfUnitOfWork.cs:行号 118
-   在 Abp.EntityFramework.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork, Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\UnitOfWorkExtensions.cs:行号 38
-   在 Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1.GetDbContext(Nullable`1 multiTenancySide) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Uow\UnitOfWorkDbContextProvider.cs:行号 33
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_get_Context_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context()
-   在 Abp.EntityFramework.Repositories.EfRepositoryBase`3.get_Table() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.EntityFramework\EntityFramework\Repositories\EfRepositoryBaseOfTEntityAndTPrimaryKey.cs:行号 31
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_get_Table_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll_callback()
-   在 Castle.Proxies.Invocations.EfRepositoryBase`3_GetAll_2.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 53
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 45
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll()
-   在 Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount) 位置 D:\Halil\Github\module-zero\src\Abp.Zero\BackgroundJobs\BackgroundJobStore.cs:行号 31
-   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync_callback(Int32 maxResultCount)
-   在 Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 62
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 41
-   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
-   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
-   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
-   在 Abp.BackgroundJobs.BackgroundJobManager.<DoWork>b__13_0() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
-   在 System.Threading.Tasks.Task`1.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
-   在 System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
-   在 Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
-   在 Abp.BackgroundJobs.BackgroundJobManager.DoWork() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
-   在 Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Threading\BackgroundWorkers\PeriodicBackgroundWorkerBase.cs:行号 48
-DEBUG 2016-12-30 00:01:25,147 [5    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
-DEBUG 2016-12-30 00:01:25,147 [5    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-30 00:01:25,148 [5    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-30 00:01:25,148 [5    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
-DEBUG 2016-12-30 00:01:32,961 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-12-30 00:01:32,970 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
-DEBUG 2016-12-30 00:01:32,973 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:32,977 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
-DEBUG 2016-12-30 00:01:33,089 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:01:33,089 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:01:33,089 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:01:33,089 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:01:33,316 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:01:33,974 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-12-30 00:01:33,977 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-12-30 00:01:33,978 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-12-30 00:01:33,978 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
-DEBUG 2016-12-30 00:01:33,979 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-12-30 00:01:34,023 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-30 00:01:34,052 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
-DEBUG 2016-12-30 00:01:34,052 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-12-30 00:01:34,054 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-12-30 00:01:34,054 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
-DEBUG 2016-12-30 00:01:34,054 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
-DEBUG 2016-12-30 00:01:34,054 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
-DEBUG 2016-12-30 00:01:34,054 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-12-30 00:01:34,054 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-12-30 00:01:34,856 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
-DEBUG 2016-12-30 00:01:34,857 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-12-30 00:01:34,858 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-12-30 00:01:34,860 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-12-30 00:01:34,861 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-ERROR 2016-12-30 00:01:37,381 [15   ] syFast.Web.Controllers.AccountController - 传入字典的模型项的类型为“EasyFast.Web.Models.Account.LoginFormViewModel”，但此字典需要类型“EasyFast.Application.Account.Dto.LoginInput”的模型项。
-System.InvalidOperationException: 传入字典的模型项的类型为“EasyFast.Web.Models.Account.LoginFormViewModel”，但此字典需要类型“EasyFast.Application.Account.Dto.LoginInput”的模型项。
-   在 System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
-   在 System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
-   在 System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+DEBUG 2016-12-31 18:23:24,379 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 18:23:24,388 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 18:23:24,388 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 18:23:24,389 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 18:23:24,431 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 18:23:24,469 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 18:23:24,473 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 18:23:24,475 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 18:23:24,475 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 18:23:24,475 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 18:23:24,475 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 18:23:24,475 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 18:23:24,475 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 18:23:25,321 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 18:23:25,321 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 18:23:25,322 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 18:23:25,323 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 18:23:25,323 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+ERROR 2016-12-31 18:23:26,789 [9    ] eas.System.Controllers.EditionController - 未将对象引用设置到对象的实例。
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ASP._Page_Areas_System_Views_Edition_Index_cshtml.Execute() 位置 d:\EasyFast\LawfirmOA\EasyFast.Web\Areas\System\Views\Edition\Index.cshtml:行号 17
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   在 System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   在 System.Web.WebPages.StartPage.RunPage()
+   在 System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
    在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
    在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
    在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
@@ -422,11 +33,26 @@ System.InvalidOperationException: 传入字典的模型项的类型为“EasyFast.Web.Models.
    在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
-ERROR 2016-12-30 00:02:17,636 [13   ] syFast.Web.Controllers.AccountController - 传入字典的模型项的类型为“EasyFast.Web.Models.Account.LoginFormViewModel”，但此字典需要类型“EasyFast.Application.Account.Dto.LoginInput”的模型项。
-System.InvalidOperationException: 传入字典的模型项的类型为“EasyFast.Web.Models.Account.LoginFormViewModel”，但此字典需要类型“EasyFast.Application.Account.Dto.LoginInput”的模型项。
-   在 System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
-   在 System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
-   在 System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+ERROR 2016-12-31 18:23:55,817 [12   ] eas.System.Controllers.EditionController - d:\EasyFast\LawfirmOA\EasyFast.Web\Areas\System\Views\Shared\_Layout.cshtml(80): error CS0246: 未能找到类型或命名空间名称“JingShOnline”(是否缺少 using 指令或程序集引用?)
+System.Web.HttpCompileException (0x80004005): d:\EasyFast\LawfirmOA\EasyFast.Web\Areas\System\Views\Shared\_Layout.cshtml(80): error CS0246: 未能找到类型或命名空间名称“JingShOnline”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   在 System.Web.WebPages.VirtualPathFactoryExtensions.CreateInstance[T](IVirtualPathFactory factory, String virtualPath)
+   在 System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   在 System.Web.WebPages.VirtualPathFactoryExtensions.CreateInstance[T](IVirtualPathFactory factory, String virtualPath)
+   在 System.Web.WebPages.WebPageBase.CreatePageFromVirtualPath(String virtualPath, HttpContextBase httpContext, Func`2 virtualPathExists, DisplayModeProvider displayModeProvider, IDisplayMode displayMode)
+   在 System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   在 System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   在 System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   在 System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   在 System.Web.WebPages.WebPageBase.PopContext()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
    在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
    在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
    在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
@@ -436,271 +62,619 @@ System.InvalidOperationException: 传入字典的模型项的类型为“EasyFast.Web.Models.
    在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
-DEBUG 2016-12-30 00:03:27,815 [11   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
-DEBUG 2016-12-30 00:03:27,815 [11   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-30 00:03:27,816 [11   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-30 00:03:27,816 [11   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
-DEBUG 2016-12-30 00:03:29,854 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-12-30 00:03:29,863 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
-DEBUG 2016-12-30 00:03:29,866 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,868 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,868 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,868 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,868 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,868 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,868 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,868 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,868 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,868 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,869 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,869 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,869 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,869 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,869 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:29,871 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
-DEBUG 2016-12-30 00:03:29,985 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:03:29,985 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:03:29,985 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:03:29,985 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:03:30,221 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:30,865 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-12-30 00:03:30,869 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-12-30 00:03:30,870 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-12-30 00:03:30,870 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
-DEBUG 2016-12-30 00:03:30,870 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-12-30 00:03:30,914 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-30 00:03:30,942 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
-DEBUG 2016-12-30 00:03:30,942 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-12-30 00:03:30,944 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-12-30 00:03:30,944 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
-DEBUG 2016-12-30 00:03:30,944 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
-DEBUG 2016-12-30 00:03:30,944 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
-DEBUG 2016-12-30 00:03:30,944 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-12-30 00:03:30,944 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-12-30 00:03:31,768 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
-DEBUG 2016-12-30 00:03:31,768 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-12-30 00:03:31,769 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-12-30 00:03:31,770 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-12-30 00:03:31,771 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-WARN  2016-12-30 00:03:33,554 [21   ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 42
+DEBUG 2016-12-31 18:25:26,085 [9    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-12-31 18:25:26,085 [9    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 18:25:26,086 [9    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 18:25:26,086 [9    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-12-31 18:25:51,415 [25   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 18:25:51,478 [25   ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 18:25:51,481 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,482 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,482 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,483 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,483 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,483 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,483 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,483 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,483 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,483 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,484 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,484 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,484 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,484 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,484 [25   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:51,486 [25   ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 18:25:51,698 [25   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 18:25:51,698 [25   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 18:25:51,698 [25   ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 18:25:51,698 [25   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 18:25:51,938 [25   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 18:25:52,234 [25   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 18:25:52,238 [25   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 18:25:52,238 [25   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 18:25:52,239 [25   ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 18:25:52,239 [25   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 18:25:52,283 [25   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 18:25:52,312 [25   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 18:25:52,313 [25   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 18:25:52,315 [25   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 18:25:52,315 [25   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 18:25:52,315 [25   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 18:25:52,315 [25   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 18:25:52,315 [25   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 18:25:52,315 [25   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 18:25:53,129 [25   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 18:25:53,130 [25   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 18:25:53,131 [25   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 18:25:53,132 [25   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 18:25:53,132 [25   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+ERROR 2016-12-31 18:54:25,228 [222  ] reas.System.Controllers.TenantController - 未找到视图“Index”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/System/Views/Tenant/Index.cshtml
+~/Areas/System/Views/Shared/Index.cshtml
+~/Areas/System/Views/Config/Tenant/Index.cshtml
+~/Areas/System/Views/User/Tenant/Index.cshtml
+~/Areas/System/Views/Case/Tenant/Index.cshtml
+~/Areas/System/Views/Config/Shared/Index.cshtml
+~/Areas/System/Views/User/Shared/Index.cshtml
+~/Areas/System/Views/Case/Shared/Index.cshtml
+~/Views/Tenant/Index.cshtml
+~/Views/Shared/Index.cshtml
+~/Views/Areas/Tenant/Index.cshtml
+System.InvalidOperationException: 未找到视图“Index”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/System/Views/Tenant/Index.cshtml
+~/Areas/System/Views/Shared/Index.cshtml
+~/Areas/System/Views/Config/Tenant/Index.cshtml
+~/Areas/System/Views/User/Tenant/Index.cshtml
+~/Areas/System/Views/Case/Tenant/Index.cshtml
+~/Areas/System/Views/Config/Shared/Index.cshtml
+~/Areas/System/Views/User/Shared/Index.cshtml
+~/Areas/System/Views/Case/Shared/Index.cshtml
+~/Views/Tenant/Index.cshtml
+~/Views/Shared/Index.cshtml
+~/Views/Areas/Tenant/Index.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+WARN  2016-12-31 18:54:27,954 [220  ] Abp.Logging.LogHelper                    - Can not find 'WellcomeMessage' in localization source 'EasyFast'!
+ERROR 2016-12-31 19:47:45,535 [302  ] reas.System.Controllers.TenantController - 未找到视图“Index”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/System/Views/Tenant/Index.cshtml
+~/Areas/System/Views/Shared/Index.cshtml
+~/Areas/System/Views/Config/Tenant/Index.cshtml
+~/Areas/System/Views/User/Tenant/Index.cshtml
+~/Areas/System/Views/Case/Tenant/Index.cshtml
+~/Areas/System/Views/Config/Shared/Index.cshtml
+~/Areas/System/Views/User/Shared/Index.cshtml
+~/Areas/System/Views/Case/Shared/Index.cshtml
+~/Views/Tenant/Index.cshtml
+~/Views/Shared/Index.cshtml
+~/Views/Areas/Tenant/Index.cshtml
+System.InvalidOperationException: 未找到视图“Index”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/System/Views/Tenant/Index.cshtml
+~/Areas/System/Views/Shared/Index.cshtml
+~/Areas/System/Views/Config/Tenant/Index.cshtml
+~/Areas/System/Views/User/Tenant/Index.cshtml
+~/Areas/System/Views/Case/Tenant/Index.cshtml
+~/Areas/System/Views/Config/Shared/Index.cshtml
+~/Areas/System/Views/User/Shared/Index.cshtml
+~/Areas/System/Views/Case/Shared/Index.cshtml
+~/Views/Tenant/Index.cshtml
+~/Views/Shared/Index.cshtml
+~/Views/Areas/Tenant/Index.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2016-12-31 19:48:45,200 [175  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2016-12-31 19:48:45,201 [175  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 19:48:45,201 [175  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 19:48:45,201 [175  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2016-12-31 19:48:57,472 [315  ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 19:48:57,531 [315  ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 19:48:57,534 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,535 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,535 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,535 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,536 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,536 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,536 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,536 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,536 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,536 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,536 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,536 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,537 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,537 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,537 [315  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:57,539 [315  ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 19:48:57,702 [315  ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 19:48:57,702 [315  ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 19:48:57,702 [315  ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 19:48:57,702 [315  ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 19:48:57,946 [315  ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 19:48:58,245 [315  ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 19:48:58,248 [315  ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 19:48:58,250 [315  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 19:48:58,250 [315  ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 19:48:58,250 [315  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 19:48:58,292 [315  ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 19:48:58,322 [315  ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 19:48:58,322 [315  ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 19:48:58,325 [315  ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 19:48:58,325 [315  ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 19:48:58,325 [315  ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 19:48:58,325 [315  ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 19:48:58,325 [315  ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 19:48:58,325 [315  ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 19:48:59,156 [315  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 19:48:59,157 [315  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 19:48:59,158 [315  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 19:48:59,158 [315  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 19:48:59,159 [315  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-12-31 22:17:29,629 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 22:17:29,640 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 22:17:29,644 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,646 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,646 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,646 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,646 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,646 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,646 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:29,648 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 22:17:29,771 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:17:29,771 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:17:29,771 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:17:29,771 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:17:30,012 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:17:30,746 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 22:17:30,751 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 22:17:30,753 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 22:17:30,753 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 22:17:30,754 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 22:17:30,796 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 22:17:30,834 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 22:17:30,834 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 22:17:30,835 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 22:17:30,836 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 22:17:30,836 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 22:17:30,836 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 22:17:30,836 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 22:17:30,836 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 22:17:31,670 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 22:17:31,670 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 22:17:31,671 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 22:17:31,672 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 22:17:31,672 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-12-31 22:17:31,673 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Edition.IEditionAppService' with service name 'app/edition'.
+WARN  2016-12-31 22:26:26,322 [81   ] Abp.Logging.LogHelper                    - Can not find 'LoginFailed' in localization source 'EasyFast'!
+WARN  2016-12-31 22:26:26,323 [81   ] Abp.Logging.LogHelper                    - Can not find 'ThereIsNoTenantDefinedWithName{0}' in localization source 'EasyFast'!
+WARN  2016-12-31 22:26:26,326 [67   ] syFast.Web.Controllers.AccountController - [Login failed]
+Abp.UI.UserFriendlyException: [Login failed]
+   在 EasyFast.Web.Controllers.AccountController.<GetLoginResultAsync>d__11.MoveNext() 位置 D:\EasyFast\LawfirmOA\EasyFast.Web\Controllers\AccountController.cs:行号 108
 --- 引发异常的上一位置中堆栈跟踪的末尾 ---
    在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 100
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 EasyFast.Web.Controllers.AccountController.<Login>d__10.MoveNext() 位置 D:\EasyFast\LawfirmOA\EasyFast.Web\Controllers\AccountController.cs:行号 77
 --- 引发异常的上一位置中堆栈跟踪的末尾 ---
    在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 67
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass3.<Run>b__1(Task t)
-   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 27
-   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
-Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 42
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 100
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 67
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass3.<Run>b__1(Task t)
-   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 27
-   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
-DEBUG 2016-12-30 00:03:35,258 [5    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
-DEBUG 2016-12-30 00:03:35,258 [5    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-30 00:03:35,259 [5    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-30 00:03:35,259 [5    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
-DEBUG 2016-12-30 00:03:36,319 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-12-30 00:03:36,328 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
-DEBUG 2016-12-30 00:03:36,331 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,334 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:36,336 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
-DEBUG 2016-12-30 00:03:36,446 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:03:36,446 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:03:36,446 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:03:36,446 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-30 00:03:36,688 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-30 00:03:37,352 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-12-30 00:03:37,355 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-12-30 00:03:37,356 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-12-30 00:03:37,356 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
-DEBUG 2016-12-30 00:03:37,357 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-12-30 00:03:37,400 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-30 00:03:37,428 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
-DEBUG 2016-12-30 00:03:37,428 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-12-30 00:03:37,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-12-30 00:03:37,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
-DEBUG 2016-12-30 00:03:37,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
-DEBUG 2016-12-30 00:03:37,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
-DEBUG 2016-12-30 00:03:37,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-12-30 00:03:37,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-12-30 00:03:38,277 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
-DEBUG 2016-12-30 00:03:38,278 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-12-30 00:03:38,279 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-12-30 00:03:38,280 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-12-30 00:03:38,280 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-WARN  2016-12-30 00:03:40,123 [26   ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 42
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 100
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 67
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass3.<Run>b__1(Task t)
-   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 27
-   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
-Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 42
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 100
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 67
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass3.<Run>b__1(Task t)
-   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 27
-   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
-DEBUG 2016-12-31 01:31:41,228 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-12-31 01:31:41,239 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
-DEBUG 2016-12-31 01:31:41,242 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,243 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,243 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,243 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:41,247 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
-DEBUG 2016-12-31 01:31:41,374 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-31 01:31:41,375 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-31 01:31:41,375 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-31 01:31:41,375 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-31 01:31:41,614 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:31:42,350 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-12-31 01:31:42,355 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-12-31 01:31:42,356 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-12-31 01:31:42,356 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
-DEBUG 2016-12-31 01:31:42,357 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-12-31 01:31:42,400 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-31 01:31:42,438 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
-DEBUG 2016-12-31 01:31:42,438 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
-DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
-DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
-DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-12-31 01:31:42,441 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-12-31 01:31:43,283 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
-DEBUG 2016-12-31 01:31:43,283 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-12-31 01:31:43,284 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-12-31 01:31:43,285 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-12-31 01:31:43,286 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2016-12-31 01:41:25,357 [59   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
-DEBUG 2016-12-31 01:41:25,358 [59   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-31 01:41:25,358 [59   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-31 01:41:25,358 [59   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
-DEBUG 2016-12-31 01:43:05,590 [49   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2016-12-31 01:43:05,657 [49   ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
-DEBUG 2016-12-31 01:43:05,660 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,661 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,661 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,661 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,661 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,662 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,663 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,663 [49   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:05,664 [49   ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
-DEBUG 2016-12-31 01:43:05,876 [49   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-31 01:43:05,876 [49   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-31 01:43:05,876 [49   ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-31 01:43:05,876 [49   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2016-12-31 01:43:06,112 [49   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2016-12-31 01:43:06,397 [49   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2016-12-31 01:43:06,401 [49   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2016-12-31 01:43:06,401 [49   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2016-12-31 01:43:06,402 [49   ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
-DEBUG 2016-12-31 01:43:06,402 [49   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2016-12-31 01:43:06,442 [49   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2016-12-31 01:43:06,471 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
-DEBUG 2016-12-31 01:43:06,471 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2016-12-31 01:43:06,474 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
-DEBUG 2016-12-31 01:43:06,474 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
-DEBUG 2016-12-31 01:43:06,474 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
-DEBUG 2016-12-31 01:43:06,474 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
-DEBUG 2016-12-31 01:43:06,474 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
-DEBUG 2016-12-31 01:43:06,475 [49   ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2016-12-31 01:43:07,260 [49   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
-DEBUG 2016-12-31 01:43:07,261 [49   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2016-12-31 01:43:07,262 [49   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2016-12-31 01:43:07,263 [49   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2016-12-31 01:43:07,263 [49   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+   在 System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeAsynchronousActionMethod>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2016-12-31 22:36:38,080 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 22:36:38,091 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 22:36:38,094 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,097 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,097 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:38,098 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 22:36:38,194 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:36:38,194 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:36:38,194 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:36:38,194 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:36:38,468 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:36:39,428 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 22:36:39,433 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 22:36:39,435 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 22:36:39,435 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 22:36:39,436 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 22:36:39,505 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 22:36:39,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 22:36:39,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 22:36:39,552 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 22:36:39,552 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 22:36:39,552 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 22:36:39,552 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 22:36:39,553 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 22:36:39,553 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 22:36:40,899 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 22:36:40,900 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 22:36:40,901 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 22:36:40,902 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 22:36:40,902 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-12-31 22:36:40,903 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Edition.IEditionAppService' with service name 'app/edition'.
+WARN  2016-12-31 22:36:43,770 [10   ] Abp.Logging.LogHelper                    - Can not find 'WellcomeMessage' in localization source 'EasyFast'!
+WARN  2016-12-31 22:36:44,673 [10   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'EasyFast'!
+WARN  2016-12-31 22:36:44,864 [10   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'EasyFast'!
+WARN  2016-12-31 22:36:44,864 [10   ] Abp.Logging.LogHelper                    - Can not find 'About' in localization source 'EasyFast'!
+WARN  2016-12-31 22:36:45,313 [10   ] Abp.Logging.LogHelper                    - Can not find 'Logout' in localization source 'EasyFast'!
+WARN  2016-12-31 22:36:45,965 [11   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'EasyFast'!
+WARN  2016-12-31 22:36:45,966 [11   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'EasyFast'!
+WARN  2016-12-31 22:36:45,966 [11   ] Abp.Logging.LogHelper                    - Can not find 'About' in localization source 'EasyFast'!
+DEBUG 2016-12-31 22:47:50,855 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 22:47:50,925 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 22:47:50,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,932 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,932 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,932 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,932 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:50,934 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 22:47:51,110 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:47:51,110 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:47:51,110 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:47:51,110 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:47:51,353 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:47:51,650 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 22:47:51,655 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 22:47:51,657 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 22:47:51,657 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 22:47:51,657 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 22:47:51,698 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 22:47:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 22:47:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 22:47:51,739 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 22:47:51,739 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 22:47:51,739 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 22:47:51,739 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 22:47:51,739 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 22:47:51,739 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 22:47:52,563 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 22:47:52,564 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 22:47:52,565 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 22:47:52,566 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 22:47:52,566 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-12-31 22:47:52,567 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Edition.IEditionAppService' with service name 'app/edition'.
+DEBUG 2016-12-31 22:50:30,210 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 22:50:30,315 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 22:50:30,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,321 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,321 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,321 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:30,323 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 22:50:30,554 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:50:30,554 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:50:30,554 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:50:30,554 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:50:30,858 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:50:31,238 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 22:50:31,244 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 22:50:31,245 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 22:50:31,245 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 22:50:31,246 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 22:50:31,314 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 22:50:31,353 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 22:50:31,353 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 22:50:31,355 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 22:50:31,356 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 22:50:31,356 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 22:50:31,356 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 22:50:31,356 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 22:50:31,356 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 22:50:32,606 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 22:50:32,607 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 22:50:32,608 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 22:50:32,609 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 22:50:32,610 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-12-31 22:50:32,611 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Edition.IEditionAppService' with service name 'app/edition'.
+DEBUG 2016-12-31 22:51:01,352 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 22:51:01,469 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 22:51:01,474 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,475 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,475 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,475 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,475 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,476 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,476 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,476 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,476 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,476 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,476 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,476 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,477 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,477 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,477 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:01,479 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 22:51:01,721 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:51:01,721 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:51:01,721 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:51:01,721 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:51:02,000 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:02,390 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 22:51:02,395 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 22:51:02,396 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 22:51:02,396 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 22:51:02,397 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 22:51:02,466 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 22:51:02,506 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 22:51:02,506 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 22:51:02,509 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 22:51:02,509 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 22:51:02,509 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 22:51:02,509 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 22:51:02,509 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 22:51:02,509 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 22:51:03,759 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 22:51:03,760 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 22:51:03,760 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 22:51:03,762 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 22:51:03,762 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-12-31 22:51:03,763 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Edition.IEditionAppService' with service name 'app/edition'.
+DEBUG 2016-12-31 22:51:44,182 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 22:51:44,252 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 22:51:44,255 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,257 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,257 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,257 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,257 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,257 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,257 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,257 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,257 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,258 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,258 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,258 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,258 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,258 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,258 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,260 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 22:51:44,436 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:51:44,436 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:51:44,436 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:51:44,436 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 22:51:44,682 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 22:51:44,981 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 22:51:44,986 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 22:51:44,987 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 22:51:44,987 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 22:51:44,988 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 22:51:45,029 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 22:51:45,067 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 22:51:45,067 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 22:51:45,070 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 22:51:45,070 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 22:51:45,070 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 22:51:45,070 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 22:51:45,070 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 22:51:45,070 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 22:51:45,894 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 22:51:45,894 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 22:51:45,895 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 22:51:45,896 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 22:51:45,896 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-12-31 22:51:45,897 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Edition.IEditionAppService' with service name 'app/edition'.
+WARN  2016-12-31 22:58:30,955 [34   ] syFast.Web.Controllers.AccountController - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 94
+   在 Abp.Web.Mvc.Validation.AbpMvcValidationFilter.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Validation\AbpMvcValidationFilter.cs:行号 35
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+WARN  2016-12-31 22:58:30,958 [34   ] syFast.Web.Controllers.AccountController - There are 2 validation errors:
+WARN  2016-12-31 22:58:30,958 [34   ] syFast.Web.Controllers.AccountController - UsernameOrEmailAddress 字段是必需的。 (UsernameOrEmailAddress)
+WARN  2016-12-31 22:58:30,958 [34   ] syFast.Web.Controllers.AccountController - Password 字段是必需的。 (Password)
+DEBUG 2016-12-31 23:05:05,885 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 23:05:06,102 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 23:05:06,107 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,110 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,110 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,110 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,110 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,111 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,111 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,111 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,111 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,111 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,111 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,112 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,112 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,112 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:06,115 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 23:05:06,384 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 23:05:06,384 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 23:05:06,384 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 23:05:06,384 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 23:05:06,690 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:05:07,089 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 23:05:07,095 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 23:05:07,096 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 23:05:07,096 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 23:05:07,097 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 23:05:07,175 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 23:05:07,216 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 23:05:07,216 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 23:05:07,218 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 23:05:07,218 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 23:05:07,219 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 23:05:07,219 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 23:05:07,219 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 23:05:07,219 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 23:05:08,470 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 23:05:08,471 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 23:05:08,472 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 23:05:08,473 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 23:05:08,485 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-12-31 23:05:08,489 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Edition.IEditionAppService' with service name 'app/edition'.
+DEBUG 2016-12-31 23:08:16,140 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-12-31 23:08:16,209 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2016-12-31 23:08:16,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,213 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,213 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,213 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,213 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,213 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,213 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,213 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,214 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,214 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,214 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,214 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,214 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,214 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,214 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,216 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2016-12-31 23:08:16,402 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 23:08:16,402 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 23:08:16,402 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 23:08:16,402 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-12-31 23:08:16,649 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-12-31 23:08:16,948 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2016-12-31 23:08:16,954 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-12-31 23:08:16,955 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-12-31 23:08:16,955 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2016-12-31 23:08:16,956 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-12-31 23:08:16,997 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-12-31 23:08:17,035 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2016-12-31 23:08:17,035 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-12-31 23:08:17,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-12-31 23:08:17,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2016-12-31 23:08:17,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2016-12-31 23:08:17,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2016-12-31 23:08:17,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-12-31 23:08:17,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-12-31 23:08:17,863 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2016-12-31 23:08:17,864 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-12-31 23:08:17,864 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-12-31 23:08:17,865 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-12-31 23:08:17,866 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2016-12-31 23:08:17,867 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Edition.IEditionAppService' with service name 'app/edition'.
+ERROR 2016-12-31 23:08:19,903 [9    ] syFast.Web.Controllers.AccountController - d:\EasyFast\LawfirmOA\EasyFast.Web\Views\Account\Login.cshtml(132): error CS0103: 当前上下文中不存在名称“Scripts”
+System.Web.HttpCompileException (0x80004005): d:\EasyFast\LawfirmOA\EasyFast.Web\Views\Account\Login.cshtml(132): error CS0103: 当前上下文中不存在名称“Scripts”
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   在 System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
+   在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+WARN  2016-12-31 23:18:00,739 [82   ] syFast.Web.Controllers.AccountController - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 94
+   在 Abp.Web.Mvc.Validation.AbpMvcValidationFilter.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Validation\AbpMvcValidationFilter.cs:行号 35
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+WARN  2016-12-31 23:18:00,741 [82   ] syFast.Web.Controllers.AccountController - There are 2 validation errors:
+WARN  2016-12-31 23:18:00,741 [82   ] syFast.Web.Controllers.AccountController - UsernameOrEmailAddress 字段是必需的。 (UsernameOrEmailAddress)
+WARN  2016-12-31 23:18:00,741 [82   ] syFast.Web.Controllers.AccountController - Password 字段是必需的。 (Password)
+WARN  2016-12-31 23:19:17,077 [100  ] syFast.Web.Controllers.AccountController - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 94
+   在 Abp.Web.Mvc.Validation.AbpMvcValidationFilter.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Validation\AbpMvcValidationFilter.cs:行号 35
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+WARN  2016-12-31 23:19:17,077 [100  ] syFast.Web.Controllers.AccountController - There are 2 validation errors:
+WARN  2016-12-31 23:19:17,077 [100  ] syFast.Web.Controllers.AccountController - UsernameOrEmailAddress 字段是必需的。 (UsernameOrEmailAddress)
+WARN  2016-12-31 23:19:17,077 [100  ] syFast.Web.Controllers.AccountController - Password 字段是必需的。 (Password)
+WARN  2016-12-31 23:22:07,467 [107  ] syFast.Web.Controllers.AccountController - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 94
+   在 Abp.Web.Mvc.Validation.AbpMvcValidationFilter.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Validation\AbpMvcValidationFilter.cs:行号 35
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+WARN  2016-12-31 23:22:07,467 [107  ] syFast.Web.Controllers.AccountController - There are 1 validation errors:
+WARN  2016-12-31 23:22:07,467 [107  ] syFast.Web.Controllers.AccountController - UsernameOrEmailAddress 字段是必需的。 (UsernameOrEmailAddress)

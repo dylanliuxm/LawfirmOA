@@ -3,12 +3,10 @@ using Abp.Authorization;
 using Abp.Authorization.Roles;
 using Abp.Authorization.Users;
 using Abp.MultiTenancy;
-using EasyFast.Core.Authorization;
-using EasyFast.Core.Authorization.Roles;
-using EasyFast.EntityFramework;
-using EasyFast.Core.Users;
-using EasyFast.Core.Entities;
 using EasyFast.EntityFramework.EntityFramework;
+using EasyFast.Core.Authorization;
+using EasyFast.Core.Entities;
+using EasyFast.Core.Authorization.Roles;
 
 namespace EasyFast.EntityFramework.Migrations.SeedData
 {

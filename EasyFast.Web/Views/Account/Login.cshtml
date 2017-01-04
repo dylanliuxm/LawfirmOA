@@ -14,8 +14,7 @@
     <meta name="author" content="北京京师律政科技有限公司" />
     <meta name="keywords" content="律师事务所OA系统,律师事务所在线办公系统,律师事务所管理系统" />
     <meta name="description" content="易迅律师事务所OA系统是一款高度成熟可靠的律师事务所管理系统。其在盈科、尚公、京师等各大律所被广泛使用，并得到了一致好评。" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="http://cdn.easyfast.cn/assets/metronic4.7.1/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="http://cdn.easyfast.cn/assets/metronic4.7.1/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
     <link href="http://cdn.easyfast.cn/assets/metronic4.7.1/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
     <link href="http://cdn.easyfast.cn/assets/metronic4.7.1/pages/css/login-5.min.css" rel="stylesheet" type="text/css" />
@@ -30,37 +29,39 @@
                     <h1>京师在线系统 - 后台登录</h1>
                     <p>系统前后台账户独立。请输入您的后台账户与密码。请注意：<strong class="font-red">您在后台的任何操作，系统都有完整的日志记录，请谨慎操作！</strong></p>
 
-                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login-form", role = "form" }))
-                    {
-                    @Html.AntiForgeryToken()
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <div class="alert alert-danger display-hide">
-                        <button class="close" data-close="alert"></button>
-                        <span>请输入您的用户名/手机号及密码！</span>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="用户名/手机号" name="UserName" required />
+                    <form id="login-form" method="post" class="login-form">
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="alert alert-danger display-hide">
+                            <button class="close" data-close="alert"></button>
+                            <span>请输入您的用户名/手机号及密码！</span>
                         </div>
-                        <div class="col-xs-6">
-                            <input class="form-control form-control-solid placeholder-no-fix form-group" type="password" autocomplete="off" placeholder="密码" name="Password" required />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <label class="rememberme mt-checkbox mt-checkbox-outline">
-                                <input type="checkbox" name="RememberMe" /> 记住我？
-                                <span></span>
-                            </label>
-                        </div>
-                        <div class="col-sm-8 text-right" style="z-index:2;">
-                            <div class="forgot-password">
-                                <a href="javascript:;" id="forget-password" class="forget-password">忘记密码？</a>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <input name="TenancyName" id="TenancyName" class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="律所" required />
                             </div>
-                            <button class="btn blue" type="submit">系统登录</button>
+                            <div class="col-xs-4">
+                                <input name="UsernameOrEmailAddress" id="UsernameOrEmailAddress" class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="用户名/邮箱" required />
+                            </div>
+                            <div class="col-xs-4">
+                                <input name="Password" id="Password" class="form-control form-control-solid placeholder-no-fix form-group" type="password" autocomplete="off" placeholder="密码" required />
+                            </div>
                         </div>
-                    </div>
-                    }
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="rememberme mt-checkbox mt-checkbox-outline">
+                                    <input type="checkbox" name="RememberMe" /> 记住我（七日内不再登录）？
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="col-sm-8 text-right" style="z-index:2;">
+                                <div class="forgot-password">
+                                    <a href="javascript:;" id="forget-password" class="forget-password">忘记密码？</a>
+                                </div>
+                                <button class="btn blue" type="submit">系统登录</button>
+                            </div>
+                        </div>
+                    </form>
 
                     <!-- BEGIN FORGOT PASSWORD FORM -->
                     <form class="forget-form" action="javascript:;" method="post">
@@ -100,7 +101,7 @@
                         </div>
                         <div class="col-xs-7 bs-reset">
                             <div class="login-copyright text-right">
-                                <p>Copyright &copy; JingShOnline 2014</p>
+                                <p>Copyright &copy; JingShOnline 2014 <a href="http://www.easyfast.cn" target="_blank">www.easyfast.cn</a> </p>
                             </div>
                         </div>
                     </div>
@@ -128,6 +129,42 @@
     <!-- END PAGE LEVEL SCRIPTS -->
     <!-- BEGIN THEME LAYOUT SCRIPTS -->
     <!-- END THEME LAYOUT SCRIPTS -->
+    <script src="~/Scripts/toastr.min.js"></script>
+    <script src="~/Scripts/sweetalert/sweet-alert.min.js"></script>
+    <script src="~/Abp/Framework/scripts/abp.js"></script>
+    <script src="~/Abp/Framework/scripts/libs/abp.jquery.js"></script>
+    <script src="~/Abp/Framework/scripts/libs/abp.toastr.js"></script>
+    <script src="~/Abp/Framework/scripts/libs/abp.blockUI.js"></script>
+    <script src="~/Abp/Framework/scripts/libs/abp.spin.js"></script>
+    <script src="~/Abp/Framework/scripts/libs/abp.sweet-alert.js"></script>
+    <script>
+        $(function () {
+            $(function () {
+            $("#login-form").submit(function (e) {
+                e.preventDefault();
+                abp.ui.setBusy('#login-form',
+                    abp.ajax({
+                        url: '@Url.Action("Login","Account")',
+                        type: 'POST',
+                        data: JSON.stringify({
+                            tenancyName: $('#TenancyName').val(),
+                            usernameOrEmailAddress: $('#UserName').val(),
+                            password: $('#Password').val(),
+                            rememberMe: $('#RememberMe').is(':checked'),
+                            returnUrlHash: $('#ReturnUrlHash').val()
+                        })
+                    }).done(function (data) {
+                        alert(data);
+                        abp.message.success('操作成功！', '提示：');
+                    }).fail(function (data) {
+                        abp.message.error(data.details, '提示：');
+                    })
+                );
+                alert("a");
+            });
+        })
+        })
+    </script>
 </body>
 </html>
 

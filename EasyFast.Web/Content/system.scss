@@ -1,0 +1,1951 @@
+﻿@import "common.scss";
+/*基础设置代码*/
+body {
+    background: #EFF3F6;
+}
+/*自定义内容：重置container的最小宽度*/
+@media (min-width: 1320px) {
+    .container {
+        width: 1320px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1392px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        width: 1560px;
+    }
+}
+
+@media (min-width: 1860px) {
+    .container {
+        width: 1800px;
+    }
+}
+
+@media (min-width: 2500px) {
+    .container {
+        width: 1800px;
+    }
+}
+
+
+
+/*顶部*/
+.header {
+    width: 100%;
+    background: #FFF;
+    height: 60px;
+    border-bottom: #E4E5E7 solid 1px;
+    .logo {
+        margin-top: 7px;
+    }
+}
+
+.navbar {
+    .navbar-brand {
+        padding: 5px 15px;
+
+        img {
+            height: 40px;
+        }
+    }
+
+    .navbar-collapse > ul {
+        > li {
+            > a {
+                color: #777;
+
+                > i {
+                    margin-right: 5px;
+                }
+            }
+
+            &:hover {
+                border-bottom: #E73D4A solid 2px;
+
+                > a {
+                    background: #F3F5F7;
+                    color: #E73D4A;
+                }
+            }
+
+            &.active {
+                border-bottom: #E73D4A solid 2px;
+
+                > a {
+                    color: #E73D4A;
+                    background: #F3F5F7;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    .navbar-right {
+        li {
+            a {
+                padding-top: 14px;
+                padding-bottom: 14px;
+
+                img {
+                    height: 20px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu {
+        li {
+            a {
+                padding: 10px 0;
+                text-align: center;
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .header_img_25 {
+        width: 25px;
+    }
+}
+
+
+
+
+
+
+/***认证页面模态框样式***/
+
+#myModal {
+    .modal-dialog{
+        width:900px;
+    }
+    h4{
+        color:#FF6700;
+    }
+    .modal-body{
+        font-size:16px;
+        color:#e85e5d;
+        text-align:center;
+        img:first-child{
+            margin-right:30px;
+        }
+        p{
+            font-size:20px;
+            margin:0;
+            padding-top:40px;
+        }
+    }
+}
+
+/***整体*/
+.authen {
+    margin-bottom: 20px;
+
+    .authen_box1 {
+        width: 70%;
+        margin-left: 15%;
+        color: #808080;
+        background: #FFF;
+        border: #E4E5E7 solid 1px;
+        border-radius: 3px;
+        padding: 20px;
+    }
+
+    .container {
+        .form-group label {
+            font-weight: normal;
+        }
+    }
+
+    .authen_title-t {
+        background: url('site/images/top.png') center top no-repeat;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        padding-top: 80px;
+        position: relative;
+    }
+
+    .step {
+        font-size: 15px;
+        color: #767676;
+        padding-left: 40%;
+        margin-top: -10px;
+
+        img {
+            float: left !important;
+            margin-right: 5px;
+        }
+
+        div {
+            float: left !important;
+            margin-right: 5px;
+        }
+    }
+
+    .authen_title-a {
+        background: url('site/images/jindu2.png') center top no-repeat;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        padding-top: 80px;
+        position: relative;
+    }
+
+    .authen_title-b {
+        background: url('site/images/jindu1.png') center top no-repeat;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        padding-top: 80px;
+        position: relative;
+    }
+
+    .authen_title-c {
+        background: url('site/images/jindu3.png') center top no-repeat;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        padding-top: 80px;
+        position: relative;
+    }
+
+    .zi {
+        padding-left: 21%;
+        padding-top: 10px;
+        font-size: 18px;
+        margin-top: -30px;
+        margin-bottom: 30px;
+
+        span {
+            margin-right: 24%;
+        }
+    }
+
+    .zhuyi_box {
+        height: 65px;
+        width: 60%;
+        margin-left: 20%;
+        border: 1px dotted #ff7937;
+        border-top: 3px solid #ff7937;
+        font-size: 15px;
+        font-weight: 500;
+        color: #E85E5D;
+        padding: 10px 10%;
+
+        img {
+            display: block;
+            float: left;
+            margin-right: 50px;
+        }
+
+        .img {
+            margin-right: 100px;
+        }
+    }
+    /**信息**/
+    .information {
+        width: 100%;
+        padding: 20px 20%;
+        padding-right: 0px;
+
+        .xinxi {
+            overflow: hidden;
+            text-align: center;
+
+            li {
+                padding-top: 20px;
+                text-align: left;
+                /*position: relative;*/
+                clear: both;
+                overflow: hidden;
+                line-height: 34px;
+
+                .span1 {
+                    font-size: 18px;
+                    display: inline-block;
+                    line-height: 34px;
+                    margin-left: 10px;
+                    color: #333;
+
+                    i {
+                        font-size: 15px;
+                        color: #E32C0A;
+                        margin-right: 10px;
+                    }
+                }
+
+                .select2-selection--single {
+                    height: 38px;
+
+                    > span {
+                        line-height: 38px;
+                        height: 38px;
+                    }
+                }
+
+                .sex, .region {
+                    width: 40%;
+                    display: inline-block;
+                    margin-left: 10px;
+                    margin-right: 11px;
+                }
+
+                .region {
+                    margin-bottom: -10px;
+                    margin-left: -5px;
+                    margin-right: 26px;
+                    select{
+                        margin-left:15px;
+                    }
+                    #Province{
+                        width:25%;
+                    }
+                    #City{
+                        width:32%;
+                    }
+                    #District{
+                        width:31%;
+                    }
+                }
+
+                .sex {
+                    span {
+                        margin-right: 15px;
+                        line-height: 34px;
+                        display: inline-block;
+
+                        input {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                .span2 {
+                    font-size: 15px;
+                    color: #505050;
+                    line-height: 34px;
+                    display: inline-block;
+                    margin-right: 10px;
+                    background: url(/Content/site/images/success.png) left center no-repeat;
+                    text-indent: 35px;
+                }
+
+                .span3 {
+                    font-size: 15px;
+                    color: #505050;
+                    line-height: 34px;
+                    display: inline-block;
+                    margin-right: 10px;
+                    background: url(/Content/site/images/fail1.png) left center no-repeat;
+                    text-indent: 35px;
+                }
+
+                > input {
+                    width: 40%;
+                    padding-left: 15px;
+                    margin-left: 10px;
+                    margin-right: 11px;
+                    border-radius: 5px;
+                    border: none;
+                    border: 1px solid #e2e2e2;
+                }
+
+                .select2 {
+                    width: 40% !important;
+                    margin-left: 10px;
+                    margin-right: 11px;
+                }
+            }
+
+            .year {
+                > .p1 {
+                    display: inline-block;
+                    width: 15%;
+                    margin-left: 20px;
+                    font-size: 15px;
+                }
+
+                > .year_icheck {
+                    overflow: hidden;
+                    width: 20%;
+
+                    label {
+                        font-size: 15px;
+                        color: #333;
+                        width: 10%;
+                        font-weight: 400;
+
+                        div {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                div {
+                    font-size: 14px;
+                    color: #FF6700;
+                    margin-left: 13%;
+                }
+            }
+
+            .dis-none {
+                display: none;
+            }
+        }
+    }
+}
+.lf {
+    float: left;
+}
+/**认证上传头像 开始**/
+.authen_rules_2 {
+    color: #808080;
+    width: 100%;
+    padding: 20px 20%;
+    margin-bottom: 20px;
+
+    h4 {
+        color: #ff6700;
+        font-size: 16px;
+        color: #ff6700;
+        margin-bottom: 10px;
+        margin-left: -15px;
+    }
+
+    ol {
+        padding-left: 0px;
+
+        li {
+            list-style: decimal;
+            line-height: 20px;
+        }
+    }
+
+    ul {
+        padding: 20px 0;
+
+        > li {
+            float: left;
+            width: 50%;
+            text-align: center;
+
+            img {
+                width: 90%;
+                height: 90%;
+            }
+
+            p {
+                margin-top: 15px;
+            }
+        }
+    }
+}
+.uploader {
+    width: 100%;
+    padding: 20px 20%;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    position: relative;
+
+    h4 {
+        margin-bottom: 15px;
+    }
+
+    #authen_Avatar {
+        display: inline-block;
+        position: absolute;
+        bottom: 15%;
+        right:15%;
+    }
+
+    .tupian_span2 {
+        font-size: 15px;
+        color: #505050;
+        line-height: 34px;
+        display: inline-block;
+        margin-right: 10px;
+        background: url(/Content/site/images/success.png) left center no-repeat;
+        text-indent: 35px;
+    }
+
+    .tupian_span3 {
+        font-size: 15px;
+        color: #505050;
+        line-height: 34px;
+        display: inline-block;
+        margin-right: 10px;
+        background: url(/Content/site/images/fail1.png) left center no-repeat;
+        text-indent: 35px;
+    }
+
+    h3 {
+        color: #ff6700;
+    }
+}
+.save {
+    text-align: center;
+    width: auto;
+    padding-left: 35%;
+    float: left;
+    font-weight:600;
+    input {
+        background: #ff7937;
+        color: #fff;
+        border: none;
+        height: 40px;
+        width: 160px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 3px;
+        &:hover{
+            background-color:#de6f38;
+        }
+    }
+    a {
+        width: 160px;
+        height: 40px;
+        float: left;
+        margin-left: 20px;
+        text-align: center;
+        font-size: 18px;
+        padding-top: 9px;
+        border-radius: 3px;
+        background: #fff;
+        border: 1px solid #ccc;
+        margin-right:20px;
+        color: #777;
+        text-decoration:none;
+        &:hover {
+            cursor: pointer;
+            background-color:#e6e6e6;
+        }
+    }
+
+    .a {
+        background: #CCCCCC;
+    }
+}
+#save {
+    margin: 30px 0px;
+    padding-left: 33%;
+
+    a {
+        width: 160px;
+        height: 40px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.success {
+    padding: 5% 20%;
+    overflow: hidden;
+
+    > img {
+        float: left;
+        margin-left: 20px;
+        width: 250px;
+        height: 250px;
+        border: 1px solid #ff6700;
+    }
+
+    ul {
+        float: left;
+        background: url('site/images/authen_success.png')no-repeat top center;
+
+        li {
+            clear: both;
+            line-height: 25px;
+            font-size: 18px;
+            color: #4D5C4C;
+            padding-left: 70px;
+            padding-bottom: 16px;
+
+            img {
+                width: 30px;
+                margin-right: 10px;
+            }
+
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+}
+/*------认证中心 LawyerCenter Authen 结束------*/
+
+/***treeview 样式微调***/
+.treecontainer {
+    width: 100%;
+
+    .treeview {
+        width: 100%;
+        z-index: 9 !important;
+    }
+}
+
+/*------工作台首页 LawyerCenter Home------*/
+.lawyer_intro {
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #FFF;
+    border: 1px solid #D0D6DB;
+    border-radius: 3px;
+
+    .avatar {
+        width: 200px;
+    }
+
+    h1 {
+        color: #0097d3;
+        display: inline-block;
+        margin-bottom: 12px;
+
+        small {
+            color: #0097d3;
+        }
+    }
+
+    .name {
+        border-bottom: #CCC dashed 1px;
+        span{
+            display:inline-block;
+            line-height:25px;
+            padding-left:25px;
+            margin-left:15px;
+        }
+    }
+    /***律师首页认证标识开始***/
+    .authen_Pass{
+        color:#01b900;
+        background:url(/Content/site/images/Index_authen_Pass.png) left center no-repeat;
+    }
+    .authen_UnPass{
+        color:#e64a40;
+        background:url(/Content/site/images/Index_authen_UnPass.png) left center no-repeat;
+    }
+    .authen_Post{
+        color:#ff9600;
+        background:url(/Content/site/images/Index_authen_Post.png) left center no-repeat;
+    }
+    .authen_Normal{
+        color:#cccccc;
+        background:url(/Content/site/images/Index_authen_Normal.png) left center no-repeat;
+    }
+    /***律师首页认证标识结束***/
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    i {
+        width: 20px;
+        text-align: center;
+        margin-right: 3px;
+        color: #0097d3;
+    }
+
+    .intro {
+        padding: 15px 0;
+
+        li {
+            width: 50%;
+            float: left;
+            line-height: 30px;
+        }
+
+        span {
+            margin-right: 3px;
+            color: #808080;
+        }
+    }
+
+    .domain {
+        li {
+            margin-bottom: 10px;
+        }
+
+        span {
+            cursor: pointer;
+            background: #0097D3;
+            padding: 6px 30px;
+            color: #FFF;
+            border-radius: 3px;
+            display: inline-block;
+
+            &:hover {
+                background: #65b8f6;
+            }
+        }
+    }
+}
+
+.lawyer_case {
+    margin-top: 50px;
+    background: #FFF;
+    border: #E4E5E7 solid 1px;
+    border-radius: 3px;
+    min-height: 600px;
+    height: 600px;
+    height: auto !important;
+    border-radius: 3px 3px 0 0;
+
+    .panel-body {
+        padding: 20px;
+        font-size: 14px;
+        border: none;
+        min-height: 880px;
+        height: 880px;
+        height: auto !important;
+
+        .nocase {
+            color: #F1494E;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .row {
+            margin-bottom: 15px;
+            border-bottom: #D0D6DB dashed 1px;
+
+            .col-md-12 {
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+                span {
+                    color: darkgrey;
+
+                    i {
+                        color: #0097d3;
+                    }
+                }
+            }
+
+            .col-md-6 {
+                margin-bottom: 5px;
+                color: darkgrey;
+
+                span {
+                    padding: 2px 5px;
+                    color: #FFF;
+                    border-radius: 3px;
+                }
+            }
+        }
+
+        a {
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+}
+
+.lawyer_case_more {
+    margin-top: 50px;
+
+    .integrity {
+        padding: 10px 20px 0px 20px;
+        background: none;
+
+        div {
+            span {
+                color: #F1494E;
+            }
+        }
+
+        div:first-child {
+            margin-bottom: 10px;
+        }
+
+        .progress {
+            //height:25px;
+            //line-height:25px;
+            //background-color:#e5e5e5;
+            //color:#F1494E;
+        }
+
+        .progress-bar-success {
+            //line-height:25px;
+            //background-color:#3aeec2;
+        }
+    }
+
+    .btn {
+        margin-top: 50px;
+        color: #FFF;
+        padding: 10px;
+        margin-bottom: 20px;
+
+        i {
+            margin-right: 3px;
+        }
+
+        .bg_blue_light:hover {
+            background: #0487bb;
+        }
+    }
+
+    p {
+        text-align: center;
+        color: #777;
+    }
+
+    .lawyer_work {
+        width: 40px;
+        height: 30px;
+        background: url(/Content/site/images/lawyer_info_work.png) 0 0 no-repeat;
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .lawyer_edu {
+        width: 40px;
+        height: 30px;
+        background: url(/Content/site/images/lawyer_info_edu.png) 0 0 no-repeat;
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .lawyer_certificate {
+        width: 30px;
+        height: 32px;
+        background: url(/Content/site/images/lawyer_info_certificate.png) 0 0 no-repeat;
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .lawyer_academic {
+        width: 30px;
+        height: 32px;
+        background: url(/Content/site/images/lawyer_info_academic.png) 0 0 no-repeat;
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .lawyer_position {
+        width: 30px;
+        height: 32px;
+        background: url(/Content/site/images/lawyer_info_position.png) 0 0 no-repeat;
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+    }
+}
+/*------工作台首页 LawyerCenter Home 结束------*/
+
+
+
+
+/*------律师案例相关 LawyerCenter Case------*/
+/*公用代码*/
+.portlet {
+    background: #FFF;
+    border: #60aee4 solid 1px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+
+    .title {
+        background-color: #3598dc;
+        padding: 0 10px;
+        color: #FFF;
+        min-height: 41px;
+        border-radius: 3px 3px 0 0;
+    }
+
+    .body {
+        min-height: 600px;
+        padding: 20px;
+
+        h3 {
+            margin: 30px 0;
+            padding-bottom: 5px;
+            font-weight: 300;
+        }
+
+        .form-actions {
+            text-align: center;
+            margin-top: 50px;
+
+            input {
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.case_box {
+    padding: 20px;
+    background: #FFF;
+    border: #E4E5E7 solid 1px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    padding-bottom: 0px;
+
+    .search {
+        margin-bottom: 20px;
+
+        i {
+            margin-right: 3px;
+        }
+
+        .btn-group {
+            margin-left: 10px;
+        }
+    }
+
+    .case_item {
+        padding: 10px 15px;
+
+        .pull-right {
+            i {
+                margin-right: 3px;
+            }
+
+            font-size: 12px;
+            color: #c0c0c0;
+        }
+
+        .row {
+            .col-md-12 {
+                a {
+                    font-size: 20px;
+                    line-height: 34px;
+                    color: #0097d3;
+                }
+
+                a:hover {
+                    color: #ff6700;
+                }
+
+                span {
+                    color: #0097d3;
+                }
+            }
+
+            .col-md-6 {
+                margin-bottom: 5px;
+                color: #B2B2B2;
+
+                span {
+                    color: #FFF;
+                    padding: 1px 6px;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+
+    .case_item:nth-child(odd) {
+        background-color: rgb(249,249,251);
+    }
+
+    .case_item:nth-child(even) {
+        background: #FFF;
+    }
+
+    .input-group-addon {
+        background: #FFF;
+    }
+}
+
+.case_filter {
+    background: #FFF;
+    padding-top: 20px;
+    border: #E4E5E7 solid 1px;
+
+    h3 {
+        font-size: 16px;
+        color: #6a6c6f;
+        margin-bottom: 15px;
+    }
+
+    h4 {
+        font-size: 14px;
+        color: #6a6c6f;
+        margin-bottom: 10px;
+    }
+
+    i {
+        margin-right: 3px;
+    }
+
+    .row {
+        margin-bottom: 20px;
+    }
+}
+
+.case_content {
+    textarea {
+        width: 90%;
+        height: 200px;
+    }
+}
+
+/*添加案例相关CSS(LawyerCenter Case Add、Update)*/
+.icheckbox_square-blue {
+    background: url(/Content/site/lawDomain-icheck-blue.png) no-repeat;
+}
+/*select2 样式覆盖开始*/
+.select2 {
+    .select2-selection--single {
+        height: 34px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        span {
+            line-height: 34px !important;
+        }
+
+        .select2-selection__arrow {
+            height: 34px;
+        }
+    }
+}
+/*select2 样式覆盖结束*/
+.lawyer, .court {
+    .select2 {
+        .select2-selection--single {
+            border: 1px solid #c2cad8;
+        }
+    }
+}
+.opt {
+    padding: 20px 0;
+    margin-bottom: 40px;
+
+    button {
+        margin-right: 5px;
+        font-size: 14px;
+
+        i {
+            padding-right: 3px;
+        }
+    }
+}
+.opt_search {
+    margin-bottom: 20px;
+}
+.caseinfo {
+    .form-group {
+        .text_error {
+            display: inline-block;
+        }
+
+        .col-md-10 {
+            padding-top: 3px;
+
+            .col-md-12 {
+                padding: 0;
+                padding-top: 7px;
+            }
+
+            .col-md-3 {
+                padding: 0;
+            }
+        }
+    }
+}
+.Status_pass {
+    .col-md-1 {
+        padding-top: 7px;
+    }
+}
+
+.CaseAnalysis1, .CaseAnalysis2, .CaseAnalysis3, .JudgmentDocument, .Status {
+    margin-bottom: 5px !important;
+
+    img {
+        margin-right: 8px;
+    }
+}
+#CaseAnalysis1, #CaseAnalysis2, #CaseAnalysis3, #JudgmentDocument {
+    margin-bottom: 20px;
+}
+
+.addcase {
+    > .case_info {
+        .portlet {
+            margin-bottom: 30px;
+            border-color: #e0e0e0;
+            border-top-left-radius: ５px;
+            border-top-right-radius: ５px;
+            .box {
+                margin: 0;
+                border: 1px;
+            }
+            .form-group {
+                label {
+                    img {
+                        margin-top: -2px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            .tittle {
+                background-color: #fcfcfc;
+                border-color: #f4bebe;
+                color: #333;
+
+                img {
+                    margin-right: 10px;
+                }
+            }
+
+            .body {
+                min-height: 430px;
+                padding: 30px 0;
+                overflow: hidden;
+
+                .form-group {
+                    overflow: hidden;
+                    margin-bottom: 20px;
+
+                    label {
+                        line-height: 34px;
+
+                        i {
+                            width: 10px;
+                            height: 10px;
+                            margin-right: 5px;
+                            background-image: url(/Content/site/images/star.png);
+                            display: inline-block;
+                        }
+                    }
+
+                    .text-error {
+                        display: inline-block;
+
+                        span {
+                            display: inline-block;
+                        }
+                    }
+                    /**日期控件**/
+                    input[name=JudgmentTime] {
+                        background: #fff;
+                    }
+                    /**法院**/
+                    .court {
+                        height: 34px;
+
+                        .select2 {
+                            height: 34px;
+
+                            span {
+                                height: 34px;
+                                line-height: 34px;
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                        }
+                    }
+                    /**案件类型**/
+                    /**案件性质（X）**/
+                    .casenature, .casetype {
+                        position: relative;
+
+                        div {
+                            margin-right: 10px !important;
+                        }
+                    }
+                }
+                /***审级下拉选择框***/
+                .select_div {
+                    height: 34px;
+                    border-radius: 4px;
+                    position: relative;
+                    border: 1px solid #ccc;
+
+                    #select_input {
+                        width: 100%;
+                        height: 32px;
+                        border: none;
+                        border-radius: 5px;
+                        text-indent: 10px;
+                        background-color: #fff;
+                    }
+
+                    .select_top_02 {
+                        width: 20px;
+                        height: 28px;
+                        position: absolute;
+                        right: 5px;
+                        top: 2px;
+                        cursor: pointer;
+                        background: url(/Content/images/lawyer/CaseAdddown.png) center center no-repeat;
+                    }
+
+                    .select_top_02_on {
+                        background: url(/Content/images/lawyer/CaseAddup.png) center center no-repeat;
+                    }
+
+                    .select_down {
+                        position: absolute;
+                        top: 30px;
+                        left: 0px;
+                        display: none;
+                        z-index: 1;
+                        border: 1px solid #ccc;
+                        background: #fff;
+
+                        .select_checkbox {
+                            line-height: 30px;
+                            border-bottom: 1px dashed #ccc;
+
+                            .level {
+                                position: relative;
+                                max-width: 100%;
+                                margin: 5px 0;
+
+                                div {
+                                    margin-right: 5px;
+                                    position: relative;
+                                }
+
+                                #select {
+                                    width: 50px;
+                                    margin: 10px 0 10px 30px;
+                                }
+                            }
+                        }
+
+                        .select_checkbox:last-child {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*添加案例相关CSS(LawyerCenter Case Add、Update)结束*/
+
+/*Case—index 筛选部分CSS*/
+.case_index {
+    .select2 {
+        width: 100% !important;
+
+        .select2-selection--single {
+            height: 34px;
+            line-height: 34px;
+
+            span {
+                height: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+
+    .case_filtrate {
+        background: #FFF;
+        padding: 20px 30px;
+        border: #E4E5E7 solid 1px;
+        margin-bottom: 50px;
+
+        h3 {
+            font-size: 16px;
+            color: #6a6c6f;
+            margin-bottom: 15px;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+
+        .col-md-12 {
+            h4 {
+                line-height: 55px;
+                font-size: 14px;
+                color: #6a6c6f;
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+
+            row {
+                padding: 0 15px;
+            }
+
+            .shenji1, .shenji2, .shenji3 {
+                cursor:pointer;
+                div {
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 10px;
+                    border: 1px solid #ccc;
+                    position: relative;
+                }
+            }
+        }
+
+        .icheckbox_square-blue, .icheckbox_square-red, .icheckbox_square-green {
+            position: absolute;
+            top: -1px;
+            left: 0;
+        }
+
+        .icheckbox_square-red {
+            background-position: -2px -2px !important;
+        }
+
+        .icheckbox_square-red.hover {
+            background-position: -26px -2px !important;
+        }
+
+        .icheckbox_square-red.checked {
+            background-position: -50px -2px !important;
+        }
+
+        .icheckbox_square-blue {
+            background-position: -2px -2px !important;
+        }
+
+        .icheckbox_square-blue.hover {
+            background-position: -26px -2px !important;
+        }
+
+        .icheckbox_square-blue.checked {
+            background-position: -50px -2px !important;
+        }
+
+        .icheckbox_square-green {
+            background-position: -2px -2px !important;
+        }
+
+        .icheckbox_square-green.hover {
+            background-position: -26px -2px !important;
+        }
+
+        .icheckbox_square-green.checked {
+            background-position: -50px -2px !important;
+        }
+    }
+
+    .case_box {
+        #lawcase_list {
+            .case_item {
+                .row {
+                    .col-md-12 {
+                        .col-md-8 {
+                            padding: 0;
+                        }
+
+                        .col-md-4 {
+                            .col-md-3 {
+                                a {
+                                    font-size: 14px !important;
+                                }
+                            }
+
+                            .col-md-6 {
+                                margin-bottom: 0;
+                                line-height: 34px;
+
+                                a {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*Case—index 筛选部分CSS结束*/
+
+/*------律师案例相关 LawyerCenter Case 结束------*/
+
+
+
+
+/*------统计概览模块 LawyerCenter Charts------*/
+.charts {
+    padding: 0 40px;
+    margin-top: 20px;
+    color: rgb(106,108,111);
+
+    .box {
+        border: #E4E5E7 solid 1px;
+        border-radius: 3px;
+        padding: 20px;
+        margin-bottom: 25px;
+        background: #FFF;
+        height: 132px;
+
+        .total_icon {
+            text-align: center;
+
+            img {
+                max-height: 72px;
+                max-width: 72px;
+                margin: auto;
+            }
+        }
+
+        .count {
+            font-size: 30px;
+            font-weight: 300;
+            color: #E73D4A;
+            line-height: 30px;
+        }
+    }
+
+    h4 {
+        font-weight: 600;
+        padding: 10px 0;
+    }
+
+    h5 {
+        margin-top: 10px;
+    }
+
+    .chart_all {
+        border: #E4E5E7 solid 1px;
+        border-radius: 3px;
+        background: #FFF;
+
+        > div {
+            height: 300px;
+        }
+    }
+
+    .chart_item {
+        background: #FFF;
+        height: 300px;
+    }
+
+    .chart_item_null {
+        background: #FFF;
+        height: 300px;
+        text-align: center;
+        padding-top: 130px;
+        color: #0097d3;
+    }
+}
+/*------统计概览模块 LawyerCenter Charts 结束------*/
+
+
+
+
+/*------个人简历 LawyerCenter Resume------*/
+.profilesInfo {
+    padding: 0;
+
+    > div {
+        min-width: 1350px;
+        max-width: 1350px;
+        padding: 75px 0;
+
+        .tittle {
+            margin-bottom: 65px;
+            height: 140px;
+            border: 1px solid #ff5858;
+            background: #fff;
+
+            > img {
+                width: 125px;
+                height: 125px;
+                margin-top: 7.5px;
+                margin-left: -77.5px;
+                margin-right: 40px;
+                float: left;
+            }
+
+            h3 {
+                display: inline-block;
+                line-height: 140px;
+                font-size: 18px;
+                color: #ff4646;
+
+                img {
+                    vertical-align: initial;
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .body {
+            background-color: #fff;
+            padding-bottom: 70px;
+
+            > div {
+                > img {
+                    width: 125px;
+                    height: 125px;
+                    margin-top: 25px;
+                    margin-left: -92.5px;
+                    margin-right: 40px;
+                    float: left;
+                }
+
+                table {
+                    width: 1145px;
+                    height: auto;
+                    border: 1px solid #dedede;
+                    margin-top: 70px;
+
+                    tr {
+                        height: 50px;
+                        line-height: 50px;
+                        border-bottom: 1px solid #dedede;
+
+                        td {
+                            display: inline-block;
+                            float: left;
+                            text-align: left;
+
+                            img {
+                                margin-right: 5px;
+                            }
+
+                            a {
+                                cursor: pointer;
+                            }
+
+                            &:first-child {
+                                width: 475px;
+                                text-indent: 20px;
+                            }
+
+                            &:nth-child(2) {
+                                width: 105px;
+                            }
+
+                            &:nth-child(3) {
+                                width: 155px;
+                            }
+
+                            &:nth-child(4) {
+                                width: 105px;
+                            }
+
+                            &:nth-child(6) {
+                                width: 90px;
+                            }
+
+                            &:last-child {
+                                width: 90px;
+                            }
+                        }
+
+                        td.add, td.refresh, td.edit, td.del {
+                            width: 100px;
+                            text-align: right;
+
+                            a {
+                                margin-right: 3px;
+
+                                i {
+                                    margin-right: 3px;
+                                }
+                            }
+                        }
+
+                        td.add {
+                            a {
+                                margin-right: 15px !important;
+                            }
+                        }
+                    }
+
+                    thead {
+                        background: #fafafa;
+
+                        tr {
+                            height: 40px;
+                            line-height: 40px;
+                        }
+                    }
+
+                    tbody {
+                        .nodata {
+                            td {
+                                width: 100% !important;
+                                min-height: 60px;
+                                text-align: center !important;
+                                line-height: 60px;
+                                color: #999;
+                            }
+                        }
+
+                        tr {
+                            &:hover {
+                                background-color: #f0fcfc;
+                            }
+                        }
+                    }
+                }
+
+                table.work {
+                    tr {
+                        td {
+                            &:first-child {
+                                width: 575px;
+                            }
+
+                            &:nth-child(2) {
+                                width: 205px;
+                            }
+                        }
+                    }
+                }
+
+                table.school {
+                    tr {
+                        td {
+                            &:first-child {
+                                width: 305px;
+                            }
+
+                            &:nth-child(2) {
+                                width: 270px;
+                            }
+
+                            &:nth-child(3) {
+                                width: 205px;
+                            }
+
+                            &:nth-child(4) {
+                                width: 155px;
+                            }
+
+                            &:nth-child(5) {
+                                width: 105px;
+                            }
+                        }
+                    }
+                }
+
+                table.aptitude {
+                    tr {
+                        td {
+                            &:first-child {
+                                width: 780px;
+                            }
+
+                            &:nth-child(2) {
+                                width: 155px;
+                            }
+
+                            &:nth-child(3) {
+                                width: 105px;
+                            }
+                        }
+                    }
+                }
+
+                table.society, table.academic {
+                    tr {
+                        td {
+                            &:first-child {
+                                width: 935px;
+                            }
+
+                            &:nth-child(2) {
+                                width: 105px;
+                            }
+                        }
+                    }
+                }
+            }
+            /***审核状态样式***/
+            .unpass {
+                color: #ff9600;
+            }
+
+            .nopass {
+                color: #ff5a5a;
+            }
+
+            .pass {
+                color: #30c9b2;
+            }
+        }
+    }
+}
+/***简历相关模态框样式***/
+#work, #edu, #cert, #academic, #socialPosition {
+    h3 {
+        text-align: center;
+    }
+
+    h5 {
+        color: #fb3333;
+        padding: 20px 0;
+    }
+
+    .datepicker {
+        input {
+            background-color: #fff;
+            margin-top:0;
+        }
+
+        span {
+            background-color: #fff;
+        }
+    }
+}
+/***简历中上传图片控件样式***/
+#eduPicker, #certificatePicker {
+    div {
+        width: 86px !important;
+        height: 42px !important;
+    }
+}
+/***简历相关模态框样式***/
+/*------个人简历 LawyerCenter Resume 结束------*/
+
+
+
+
+/*------个人设置相关 LawyerCenter Profile------*/
+.profiles {
+    margin-bottom: 20px;
+    width: 1300px;
+
+    .profiles_filter {
+        background: #FFF;
+        padding-top: 20px;
+        border: 1px solid #E4E5E7;
+
+        h3 {
+            font-size: 18px;
+            color: #6a6c6f;
+            padding-left: 54px;
+        }
+
+        .title {
+            a {
+                color: #E73D4A;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+        }
+
+        h4 {
+            font-size: 16px;
+            color: #6a6c6f;
+            margin-bottom: 10px;
+        }
+
+        h4, h3 {
+            a {
+                color: #333;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            .active {
+                color: #E73D4A;
+            }
+        }
+
+        i {
+            margin-right: 3px;
+        }
+
+        .row {
+            margin-bottom: 20px;
+        }
+    }
+
+    .profiles_box {
+        padding: 20px;
+        background: #FFF;
+        border: #E4E5E7 solid 1px;
+        border-radius: 3px;
+        min-height: 535px;
+
+        .title_hint {
+            > div {
+                margin-top: 25px;
+                margin-bottom: 50px;
+
+                h3 {
+                    font-size: 26px;
+                    display: inline-block;
+                    margin-bottom: 10px;
+                }
+
+                span {
+                    margin-left: 54px;
+                    color: #E73D4A;
+                }
+            }
+
+            > span {
+                line-height: 50px;
+                font-size: 16px;
+                padding-left: 0;
+
+                > span {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .profiles_body {
+        label {
+            text-align: right;
+            line-height: 35px;
+        }
+
+        div {
+            line-height: 35px;
+
+            .year_show {
+                font-size: 14px;
+                font-weight: 400;
+                margin-right: 50px;
+
+                div {
+                    margin-right: 10px;
+                }
+            }
+
+            .year_hidden {
+                font-size: 14px;
+                font-weight: 400;
+
+                div {
+                    margin-right: 10px;
+                }
+            }
+
+            span {
+                display: inline-block;
+            }
+        }
+
+        .form-actions {
+            text-align: center;
+            margin-top: 50px;
+        }
+    }
+}
+/*------个人设置相关 LawyerCenter Profile 结束------*/
+
+
+
+
+/*------底部------*/
+footer {
+    background: #6E6E6E url(site/red/bg_footer.png) top center no-repeat;
+    color: #FFF;
+    font-size: 16px;
+
+    a {
+        color: #FFF;
+    }
+
+    h3 {
+        background: url(site/red/allworld.png) no-repeat;
+        padding-left: 45px;
+        height: 40px;
+        margin-top: 10px;
+        line-height: 32px;
+    }
+
+    h4 {
+        padding-left: 30px;
+        height: 24px;
+        margin: 10px 0 5px 7px;
+        line-height: 22px;
+    }
+
+    h4.in {
+        background: url(site/red/jingshin.png) 0 0 no-repeat;
+    }
+
+    h4.out {
+        background: url(site/red/jingshout.png) 0 0 no-repeat;
+    }
+
+    ul {
+        padding: 10px 10px 5px 40px;
+        overflow: hidden;
+
+        li {
+            float: left;
+            margin-right: 10px;
+            line-height: 28px;
+        }
+    }
+
+    .col-md-3 {
+        text-align: center;
+
+        p {
+            width: 190px;
+            margin: 0 auto;
+        }
+    }
+
+    .tel {
+        background: url(site/red/tel.png) 0 15px no-repeat;
+        padding-left: 55px;
+        height: 67px;
+        padding-top: 15px;
+
+        span {
+            color: #eeae3b;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+    }
+
+    .contact {
+        border-top: #FFF dashed 1px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+
+        a {
+            font-size: 16px;
+            margin-left: 4px;
+            margin-right: 4px;
+            padding: 3px 5px;
+        }
+    }
+
+    .bottom {
+        background: #484848;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .col-md-3 > img {
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+/*------底部结束------*/

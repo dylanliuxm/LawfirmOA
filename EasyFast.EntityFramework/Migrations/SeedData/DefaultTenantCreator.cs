@@ -1,7 +1,7 @@
 using System.Linq;
-using EasyFast.EntityFramework;
 using EasyFast.Core.MultiTenancy;
 using EasyFast.EntityFramework.EntityFramework;
+using System;
 
 namespace EasyFast.EntityFramework.Migrations.SeedData
 {
@@ -26,7 +26,7 @@ namespace EasyFast.EntityFramework.Migrations.SeedData
             var defaultTenant = _context.Tenants.FirstOrDefault(t => t.TenancyName == Tenant.DefaultTenantName);
             if (defaultTenant == null)
             {
-                _context.Tenants.Add(new Tenant {TenancyName = Tenant.DefaultTenantName, Name = Tenant.DefaultTenantName});
+                _context.Tenants.Add(new Tenant {TenancyName = Tenant.DefaultTenantName, Name = Tenant.DefaultTenantName });
                 _context.SaveChanges();
             }
         }
