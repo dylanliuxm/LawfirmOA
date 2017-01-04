@@ -137,34 +137,7 @@
     <script src="~/Abp/Framework/scripts/libs/abp.blockUI.js"></script>
     <script src="~/Abp/Framework/scripts/libs/abp.spin.js"></script>
     <script src="~/Abp/Framework/scripts/libs/abp.sweet-alert.js"></script>
-    <script>
-        $(function () {
-            $(function () {
-            $("#login-form").submit(function (e) {
-                e.preventDefault();
-                abp.ui.setBusy('#login-form',
-                    abp.ajax({
-                        url: '@Url.Action("Login","Account")',
-                        type: 'POST',
-                        data: JSON.stringify({
-                            tenancyName: $('#TenancyName').val(),
-                            usernameOrEmailAddress: $('#UserName').val(),
-                            password: $('#Password').val(),
-                            rememberMe: $('#RememberMe').is(':checked'),
-                            returnUrlHash: $('#ReturnUrlHash').val()
-                        })
-                    }).done(function (data) {
-                        alert(data);
-                        abp.message.success('操作成功！', '提示：');
-                    }).fail(function (data) {
-                        abp.message.error(data.details, '提示：');
-                    })
-                );
-                alert("a");
-            });
-        })
-        })
-    </script>
+
 </body>
 </html>
 

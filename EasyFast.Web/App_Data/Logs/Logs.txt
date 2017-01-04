@@ -678,3 +678,338 @@ Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! S
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
 WARN  2016-12-31 23:22:07,467 [107  ] syFast.Web.Controllers.AccountController - There are 1 validation errors:
 WARN  2016-12-31 23:22:07,467 [107  ] syFast.Web.Controllers.AccountController - UsernameOrEmailAddress 字段是必需的。 (UsernameOrEmailAddress)
+DEBUG 2017-01-04 16:27:12,175 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-01-04 16:27:12,184 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-01-04 16:27:12,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,188 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,190 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,190 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,190 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:12,192 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-01-04 16:27:12,272 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-01-04 16:27:12,272 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-01-04 16:27:12,272 [1    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-01-04 16:27:12,272 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-01-04 16:27:12,557 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:27:13,353 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-01-04 16:27:13,359 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-01-04 16:27:13,360 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-01-04 16:27:13,361 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2017-01-04 16:27:13,362 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-01-04 16:27:13,416 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-01-04 16:27:13,460 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2017-01-04 16:27:13,460 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-01-04 16:27:13,464 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-01-04 16:27:13,464 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2017-01-04 16:27:13,464 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2017-01-04 16:27:13,464 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2017-01-04 16:27:13,464 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-01-04 16:27:13,464 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-01-04 16:27:14,448 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2017-01-04 16:27:14,448 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-01-04 16:27:14,462 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-01-04 16:27:14,463 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-01-04 16:27:14,464 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-01-04 16:27:14,464 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Edition.IEditionAppService' with service name 'app/edition'.
+WARN  2017-01-04 16:27:58,531 [15   ] Abp.BackgroundJobs.BackgroundJobManager  - System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: 无法打开登录所请求的数据库 "oa.easyfast.cn"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   在 System.Data.Entity.Core.EntityClient.EntityConnection.<Open>b__2()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   在 System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   在 System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   在 System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount) 位置 D:\Halil\Github\module-zero\src\Abp.Zero\BackgroundJobs\BackgroundJobStore.cs:行号 31
+   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync_callback(Int32 maxResultCount)
+   在 Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 62
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 41
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
+   在 Abp.BackgroundJobs.BackgroundJobManager.<DoWork>b__13_0() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
+   在 System.Threading.Tasks.Task`1.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
+   在 System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   在 Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
+   在 Abp.BackgroundJobs.BackgroundJobManager.DoWork() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
+   在 Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Threading\BackgroundWorkers\PeriodicBackgroundWorkerBase.cs:行号 48
+System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: 无法打开登录所请求的数据库 "oa.easyfast.cn"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   在 System.Data.Entity.Core.EntityClient.EntityConnection.<Open>b__2()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   在 System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   在 System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   在 System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   在 System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount) 位置 D:\Halil\Github\module-zero\src\Abp.Zero\BackgroundJobs\BackgroundJobStore.cs:行号 31
+   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync_callback(Int32 maxResultCount)
+   在 Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 62
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 41
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 35
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
+   在 Abp.BackgroundJobs.BackgroundJobManager.<DoWork>b__13_0() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
+   在 System.Threading.Tasks.Task`1.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
+   在 System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   在 Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
+   在 Abp.BackgroundJobs.BackgroundJobManager.DoWork() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\BackgroundJobs\BackgroundJobManager.cs:行号 73
+   在 Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Threading\BackgroundWorkers\PeriodicBackgroundWorkerBase.cs:行号 48
+WARN  2017-01-04 16:28:28,818 [10   ] syFast.Web.Controllers.AccountController - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 94
+   在 Abp.Web.Mvc.Validation.AbpMvcValidationFilter.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Validation\AbpMvcValidationFilter.cs:行号 35
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+WARN  2017-01-04 16:28:28,821 [10   ] syFast.Web.Controllers.AccountController - There are 1 validation errors:
+WARN  2017-01-04 16:28:28,821 [10   ] syFast.Web.Controllers.AccountController - UsernameOrEmailAddress 字段是必需的。 (UsernameOrEmailAddress)
+WARN  2017-01-04 16:28:29,842 [14   ] Abp.Logging.LogHelper                    - Can not find 'LoginFailed' in localization source 'EasyFast'!
+WARN  2017-01-04 16:28:29,843 [14   ] Abp.Logging.LogHelper                    - Can not find 'InvalidUserNameOrPassword' in localization source 'EasyFast'!
+WARN  2017-01-04 16:28:29,847 [20   ] syFast.Web.Controllers.AccountController - [Login failed]
+Abp.UI.UserFriendlyException: [Login failed]
+   在 EasyFast.Web.Controllers.AccountController.<GetLoginResultAsync>d__11.MoveNext() 位置 D:\EasyFast\LawfirmOA\EasyFast.Web\Controllers\AccountController.cs:行号 108
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 EasyFast.Web.Controllers.AccountController.<Login>d__10.MoveNext() 位置 D:\EasyFast\LawfirmOA\EasyFast.Web\Controllers\AccountController.cs:行号 77
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeAsynchronousActionMethod>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+WARN  2017-01-04 16:29:04,544 [15   ] syFast.Web.Controllers.AccountController - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 94
+   在 Abp.Web.Mvc.Validation.AbpMvcValidationFilter.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Validation\AbpMvcValidationFilter.cs:行号 35
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+WARN  2017-01-04 16:29:04,544 [15   ] syFast.Web.Controllers.AccountController - There are 1 validation errors:
+WARN  2017-01-04 16:29:04,544 [15   ] syFast.Web.Controllers.AccountController - UsernameOrEmailAddress 字段是必需的。 (UsernameOrEmailAddress)
+WARN  2017-01-04 16:30:05,100 [37   ] Abp.Logging.LogHelper                    - Can not find 'WellcomeMessage' in localization source 'EasyFast'!
+WARN  2017-01-04 16:30:05,888 [37   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'EasyFast'!
+WARN  2017-01-04 16:30:06,027 [37   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'EasyFast'!
+WARN  2017-01-04 16:30:06,027 [37   ] Abp.Logging.LogHelper                    - Can not find 'About' in localization source 'EasyFast'!
+WARN  2017-01-04 16:30:06,521 [37   ] Abp.Logging.LogHelper                    - Can not find 'Logout' in localization source 'EasyFast'!
+WARN  2017-01-04 16:30:07,153 [15   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'EasyFast'!
+WARN  2017-01-04 16:30:07,154 [15   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'EasyFast'!
+WARN  2017-01-04 16:30:07,154 [15   ] Abp.Logging.LogHelper                    - Can not find 'About' in localization source 'EasyFast'!
+WARN  2017-01-04 16:30:23,619 [27   ] syFast.Web.Controllers.AccountController - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 94
+   在 Abp.Web.Mvc.Validation.AbpMvcValidationFilter.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Validation\AbpMvcValidationFilter.cs:行号 35
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+WARN  2017-01-04 16:30:23,619 [27   ] syFast.Web.Controllers.AccountController - There are 1 validation errors:
+WARN  2017-01-04 16:30:23,619 [27   ] syFast.Web.Controllers.AccountController - UsernameOrEmailAddress 字段是必需的。 (UsernameOrEmailAddress)
+DEBUG 2017-01-04 16:30:39,011 [30   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-01-04 16:30:39,011 [30   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-01-04 16:30:39,012 [30   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-01-04 16:30:39,012 [30   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-01-04 16:35:15,974 [5    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-01-04 16:35:16,059 [5    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-01-04 16:35:16,062 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Web.EasyFastWebModule, EasyFast.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,063 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EntityFramework.EasyFastDataModule, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,063 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,064 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,064 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,064 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,064 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.EasyFastCoreModule, EasyFast.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,064 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Application.EasyFastApplicationModule, EasyFast.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,064 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,064 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: EasyFast.Api.EasyFastWebApiModule, EasyFast.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,065 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,065 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,065 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,065 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,065 [5    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,067 [5    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-01-04 16:35:16,333 [5    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-01-04 16:35:16,333 [5    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-01-04 16:35:16,333 [5    ] o.Configuration.LanguageManagementConfig - Converted EasyFast (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-01-04 16:35:16,333 [5    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-01-04 16:35:16,669 [5    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: EasyFast.EntityFramework.EntityFramework.EasyFastDbContext, EasyFast.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-01-04 16:35:16,998 [5    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-01-04 16:35:17,004 [5    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-01-04 16:35:17,005 [5    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-01-04 16:35:17,006 [5    ] Abp.Localization.LocalizationManager     - Initialized localization source: EasyFast
+DEBUG 2017-01-04 16:35:17,006 [5    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-01-04 16:35:17,061 [5    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-01-04 16:35:17,101 [5    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 7 classes define auto mapping attributes
+DEBUG 2017-01-04 16:35:17,101 [5    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-01-04 16:35:17,104 [5    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-01-04 16:35:17,105 [5    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.CreateUserInput
+DEBUG 2017-01-04 16:35:17,105 [5    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.Users.Dto.UserListDto
+DEBUG 2017-01-04 16:35:17,105 [5    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2017-01-04 16:35:17,105 [5    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Application.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-01-04 16:35:17,105 [5    ] Abp.AutoMapper.AbpAutoMapperModule       - EasyFast.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-01-04 16:35:18,018 [5    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.UserType.IUserTypeAppService' with service name 'app/userType'.
+DEBUG 2017-01-04 16:35:18,019 [5    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-01-04 16:35:18,020 [5    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-01-04 16:35:18,021 [5    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-01-04 16:35:18,022 [5    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-01-04 16:35:18,022 [5    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'EasyFast.Application.Edition.IEditionAppService' with service name 'app/edition'.
+WARN  2017-01-04 16:35:46,215 [11   ] syFast.Web.Controllers.AccountController - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 94
+   在 Abp.Web.Mvc.Validation.AbpMvcValidationFilter.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Validation\AbpMvcValidationFilter.cs:行号 35
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+WARN  2017-01-04 16:35:46,218 [11   ] syFast.Web.Controllers.AccountController - There are 1 validation errors:
+WARN  2017-01-04 16:35:46,219 [11   ] syFast.Web.Controllers.AccountController - UsernameOrEmailAddress 字段是必需的。 (UsernameOrEmailAddress)
+WARN  2017-01-04 16:36:09,420 [50   ] rity.AntiForgery.AbpAntiForgeryMvcFilter - Empty or invalid anti forgery header token.
+WARN  2017-01-04 16:36:09,420 [50   ] rity.AntiForgery.AbpAntiForgeryMvcFilter - Requested URI: http://localhost:8088/Account/Login
+WARN  2017-01-04 17:25:44,264 [293  ] syFast.Web.Controllers.AccountController - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 94
+   在 Abp.Web.Mvc.Validation.AbpMvcValidationFilter.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Validation\AbpMvcValidationFilter.cs:行号 35
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+WARN  2017-01-04 17:25:44,264 [293  ] syFast.Web.Controllers.AccountController - There are 2 validation errors:
+WARN  2017-01-04 17:25:44,264 [293  ] syFast.Web.Controllers.AccountController - Password 字段是必需的。 (Password)
+WARN  2017-01-04 17:25:44,264 [293  ] syFast.Web.Controllers.AccountController - UsernameOrEmailAddress 字段是必需的。 (UsernameOrEmailAddress)
+WARN  2017-01-04 17:25:59,546 [298  ] syFast.Web.Controllers.AccountController - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:行号 94
+   在 Abp.Web.Mvc.Validation.AbpMvcValidationFilter.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Validation\AbpMvcValidationFilter.cs:行号 35
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+WARN  2017-01-04 17:25:59,546 [298  ] syFast.Web.Controllers.AccountController - There are 2 validation errors:
+WARN  2017-01-04 17:25:59,546 [298  ] syFast.Web.Controllers.AccountController - Password 字段是必需的。 (Password)
+WARN  2017-01-04 17:25:59,546 [298  ] syFast.Web.Controllers.AccountController - UsernameOrEmailAddress 字段是必需的。 (UsernameOrEmailAddress)
