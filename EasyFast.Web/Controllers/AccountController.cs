@@ -25,6 +25,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using EasyFast.Core.Entities;
+using EasyFast.Application.Account.Dto;
 
 namespace EasyFast.Web.Controllers
 {
@@ -67,15 +68,22 @@ namespace EasyFast.Web.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [DisableAuditing]
+        public JsonResult Login(LoginInput loginModel)
+        {
+            throw new UserFriendlyException("biaoti", "neirong");
+        }
+
 
         [HttpPost]
         [DisableAuditing]
-        public async Task<JsonResult> Login(LoginViewModel loginModel, string returnUrl = "", string returnUrlHash = "")
+        public async Task<JsonResult> Login1(LoginInput loginModel, string returnUrl = "", string returnUrlHash = "")
         {
             CheckModelState();
 
             var loginResult = await GetLoginResultAsync(
-                loginModel.UsernameOrEmailAddress,
+                loginModel.UserName,
                 loginModel.Password,
                 loginModel.TenancyName
                 );

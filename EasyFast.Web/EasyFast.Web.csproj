@@ -44,52 +44,52 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abp, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.1.2.0.0\lib\net452\Abp.dll</HintPath>
+    <Reference Include="Abp, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.1.2.1.0\lib\net452\Abp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.AutoMapper, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.AutoMapper.1.2.0.0\lib\net452\Abp.AutoMapper.dll</HintPath>
+    <Reference Include="Abp.AutoMapper, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.AutoMapper.1.2.1.0\lib\net452\Abp.AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Castle.Log4Net, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Castle.Log4Net.1.2.0.0\lib\net452\Abp.Castle.Log4Net.dll</HintPath>
+    <Reference Include="Abp.Castle.Log4Net, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Castle.Log4Net.1.2.1.0\lib\net452\Abp.Castle.Log4Net.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.EntityFramework, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.EntityFramework.1.2.0.0\lib\net452\Abp.EntityFramework.dll</HintPath>
+    <Reference Include="Abp.EntityFramework, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.EntityFramework.1.2.1.0\lib\net452\Abp.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.EntityFramework.Common, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.EntityFramework.Common.1.2.0.0\lib\net452\Abp.EntityFramework.Common.dll</HintPath>
+    <Reference Include="Abp.EntityFramework.Common, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.EntityFramework.Common.1.2.1.0\lib\net452\Abp.EntityFramework.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.HangFire, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.HangFire.1.2.0.0\lib\net452\Abp.HangFire.dll</HintPath>
+    <Reference Include="Abp.HangFire, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.HangFire.1.2.1.0\lib\net452\Abp.HangFire.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Owin, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Owin.1.2.0.0\lib\net452\Abp.Owin.dll</HintPath>
+    <Reference Include="Abp.Owin, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Owin.1.2.1.0\lib\net452\Abp.Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.1.2.0.0\lib\net452\Abp.Web.dll</HintPath>
+    <Reference Include="Abp.Web, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.1.2.1.0\lib\net452\Abp.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web.Api, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.Api.1.2.0.0\lib\net452\Abp.Web.Api.dll</HintPath>
+    <Reference Include="Abp.Web.Api, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.Api.1.2.1.0\lib\net452\Abp.Web.Api.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web.Common, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.Common.1.2.0.0\lib\net452\Abp.Web.Common.dll</HintPath>
+    <Reference Include="Abp.Web.Common, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.Common.1.2.1.0\lib\net452\Abp.Web.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web.Mvc, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.Mvc.1.2.0.0\lib\net452\Abp.Web.Mvc.dll</HintPath>
+    <Reference Include="Abp.Web.Mvc, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.Mvc.1.2.1.0\lib\net452\Abp.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web.SignalR, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.SignalR.1.2.0.0\lib\net452\Abp.Web.SignalR.dll</HintPath>
+    <Reference Include="Abp.Web.SignalR, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.SignalR.1.2.1.0\lib\net452\Abp.Web.SignalR.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Abp.Zero, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -140,8 +140,8 @@
       <HintPath>..\packages\Hangfire.SqlServer.1.6.8\lib\net45\Hangfire.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="log4net, Version=2.0.6.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.6\lib\net45-full\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -222,7 +222,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Collections.Immutable.1.3.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <HintPath>..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
@@ -437,14 +437,15 @@
     <Content Include="Areas\Admin\Views\Shared\_Iframe.cshtml" />
     <Content Include="Areas\Admin\Views\Config\UserType\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Config\UserType\Update.cshtml" />
-    <Content Include="Abp\Framework\styles\abp.mixings.less" />
-    <Content Include="Abp\Framework\styles\abp.mixings.css.map" />
-    <Content Include="Abp\Framework\styles\abp.less" />
-    <Content Include="Abp\Framework\styles\abp.css.map" />
     <Content Include="Areas\System\Views\web.config" />
     <Content Include="Areas\System\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\System\Views\_ViewStart.cshtml" />
     <Content Include="Areas\System\Views\Edition\Index.cshtml" />
+    <Content Include="Abp\Framework\styles\abp.mixings.less" />
+    <Content Include="Abp\Framework\styles\abp.mixings.css.map" />
+    <Content Include="Abp\Framework\styles\abp.less" />
+    <Content Include="Abp\Framework\styles\abp.css.map" />
+    <Content Include="Areas\System\Views\Shared\_Breadcrumb.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -498,7 +499,7 @@
     <Content Include="Views\Account\Login.css">
       <DependentUpon>Login.less</DependentUpon>
     </Content>
-    <Content Include="Views\Account\Login.js" />
+    <Content Include="Views\Account\login.js" />
     <Content Include="Views\Account\Login.min.css">
       <DependentUpon>Login.css</DependentUpon>
     </Content>
@@ -541,7 +542,6 @@
     <Compile Include="Extend\EasyFastViewEngine.cs" />
     <Compile Include="Models\Layout\UserMenuOrLoginLinkViewModel.cs" />
     <Compile Include="Models\Account\LoginFormViewModel.cs" />
-    <Compile Include="Models\Account\LoginViewModel.cs" />
     <Compile Include="Models\Account\RegisterResultViewModel.cs" />
     <Compile Include="Models\Account\RegisterViewModel.cs" />
     <Compile Include="Models\Account\TenantSelectionViewModel.cs" />

@@ -1,32 +1,39 @@
-﻿@model IEnumerable<EasyFast.Application.Edition.Dto.DataList>
-
+﻿
 @{
     ViewBag.Title = "Index";
 }
 
-
+<div class="row opt">
+    <div class="col-md-12">
+        <div class="">
+            <button id="add" class="btn green opt"><i class="fa fa-plus-square"></i>新建项目</button>
+            <button id="update" class="btn blue opt"><i class="fa fa-edit"></i>编辑选中</button>
+            <button id="del" class="btn red opt"><i class="fa fa-remove"></i>删除选中</button>
+        </div>
+    </div>
+</div>
 <div class="row">
-    <div class="col-md-3">
-
+    <div class="col-md-12">
+        <table id="easyui-datagrid" class="easyui-datagrid" data-options="
+               method: 'post' ,
+               url: '@Url.Action("DataList")',
+               pagination: true,
+               rownumbers: true,
+               pageSize: 20,
+               idField:'Id',
+               sortable:true
+               ">
+            <thead>
+                <tr>
+                    <th data-options="field:'ck',checkbox:true"></th>
+                    <th data-options="field:'Id',width:100,sortable: true">ID</th>
+                    <th data-options="field:'Name',width:300,sortable: true">系统名称</th>
+                    <th data-options="field:'DisplayName',width:300,sortable: true">显示名称</th>
+                    <th data-options="field:'Remarks',width:600,sortable: true">备注信息</th>
+                </tr>
+            </thead>
+        </table>
     </div>
 </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th></th>
-    </tr>
 
-@*@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}*@
-
-</table>

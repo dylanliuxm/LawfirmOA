@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using EasyFast.Application.Edition.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,6 @@ namespace EasyFast.Application.Edition
 {
     public interface IEditionAppService : IApplicationService
     {
+        IEnumerable<EditionDto> GetList();
     }
 }

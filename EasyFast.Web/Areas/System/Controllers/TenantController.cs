@@ -9,6 +9,9 @@ namespace EasyFast.Web.Areas.System.Controllers
 {
     public class TenantController : EasyFastControllerBase
     {
+        #region MyRegion
+
+        #endregion
         // GET: System/Tenant
         public ActionResult Index()
         {
