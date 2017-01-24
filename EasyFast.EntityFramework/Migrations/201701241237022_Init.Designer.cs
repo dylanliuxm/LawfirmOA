@@ -13,7 +13,7 @@ namespace EasyFast.EntityFramework.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201701240943573_Init"; }
+            get { return "201701241237022_Init"; }
         }
         
         string IMigrationMetadata.Source

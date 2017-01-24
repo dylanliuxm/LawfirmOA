@@ -120,9 +120,9 @@
   <ItemGroup>
     <Compile Include="EntityFramework\EasyFastDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\EasyFastRepositoryBase.cs" />
-    <Compile Include="Migrations\201701240943573_Init.cs" />
-    <Compile Include="Migrations\201701240943573_Init.Designer.cs">
-      <DependentUpon>201701240943573_Init.cs</DependentUpon>
+    <Compile Include="Migrations\201701241237022_Init.cs" />
+    <Compile Include="Migrations\201701241237022_Init.Designer.cs">
+      <DependentUpon>201701241237022_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="EasyFastDataModule.cs" />
@@ -152,8 +152,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701240943573_Init.resx">
-      <DependentUpon>201701240943573_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701241237022_Init.resx">
+      <DependentUpon>201701241237022_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
