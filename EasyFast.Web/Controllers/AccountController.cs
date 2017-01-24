@@ -68,17 +68,10 @@ namespace EasyFast.Web.Controllers
         {
             return View();
         }
-        [HttpPost]
-        [DisableAuditing]
-        public JsonResult Login(LoginInput loginModel)
-        {
-            throw new UserFriendlyException("biaoti", "neirong");
-        }
-
 
         [HttpPost]
         [DisableAuditing]
-        public async Task<JsonResult> Login1(LoginInput loginModel, string returnUrl = "", string returnUrlHash = "")
+        public async Task<JsonResult> Login(LoginInput loginModel, string returnUrl = "", string returnUrlHash = "")
         {
             CheckModelState();
 

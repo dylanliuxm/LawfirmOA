@@ -111,6 +111,7 @@
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\AppUser.cs" />
     <Compile Include="Entities\Interface\IRowVersion.cs" />
+    <Compile Include="Entities\Organization.cs" />
     <Compile Include="Entities\UserType.cs" />
     <Compile Include="Features\FeatureValueStore.cs" />
     <Compile Include="MultiTenancy\Tenant.cs" />

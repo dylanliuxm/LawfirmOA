@@ -149,4 +149,6 @@ ul, li, h1, h2, h3, h4, h5, h6 {
 /*操作区域*/
 .opt {
   padding-bottom: 20px; }
+  .opt button, .opt input[type=button] {
+    margin-right: 7px; }
 

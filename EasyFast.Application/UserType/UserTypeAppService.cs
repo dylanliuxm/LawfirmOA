@@ -14,15 +14,16 @@ namespace EasyFast.Application.UserType
 {
     public class UserTypeAppService : EasyFastAppServiceBase, IUserTypeAppService
     {
+        #region 依赖注入
         private readonly IRepository<Core.Entities.UserType, long> _userTypeRepository;
         private readonly IUserTypeService _userTypeService;
-
-
         public UserTypeAppService(IRepository<Core.Entities.UserType, long> userTypeRepository, IUserTypeService userTypeService)
         {
             _userTypeRepository = userTypeRepository;
             _userTypeService = userTypeService;
         }
+        #endregion
+
 
         public UserTypeInput Find(long id)
         {
