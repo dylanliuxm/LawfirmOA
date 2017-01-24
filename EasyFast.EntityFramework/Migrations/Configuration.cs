@@ -27,6 +27,7 @@ namespace EasyFast.EntityFramework.Migrations
                 new InitialHostDbBuilder(context).Create();
 
                 //Default tenant seed (in host database).
+                new DefaultDataCreator(context).Create();//自定义初始化数据
                 new DefaultTenantCreator(context).Create();
                 new TenantRoleAndUserBuilder(context, 1).Create();
             }

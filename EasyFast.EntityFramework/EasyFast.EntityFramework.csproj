@@ -120,13 +120,14 @@
   <ItemGroup>
     <Compile Include="EntityFramework\EasyFastDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\EasyFastRepositoryBase.cs" />
-    <Compile Include="Migrations\201612310749285_Init.cs" />
-    <Compile Include="Migrations\201612310749285_Init.Designer.cs">
-      <DependentUpon>201612310749285_Init.cs</DependentUpon>
+    <Compile Include="Migrations\201701240943573_Init.cs" />
+    <Compile Include="Migrations\201701240943573_Init.Designer.cs">
+      <DependentUpon>201701240943573_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="EasyFastDataModule.cs" />
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
+    <Compile Include="Migrations\SeedData\DefaultDataCreator.cs" />
     <Compile Include="Migrations\SeedData\DefaultEditionsCreator.cs" />
     <Compile Include="Migrations\SeedData\DefaultLanguagesCreator.cs" />
     <Compile Include="Migrations\SeedData\DefaultSettingsCreator.cs" />
@@ -151,8 +152,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201612310749285_Init.resx">
-      <DependentUpon>201612310749285_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701240943573_Init.resx">
+      <DependentUpon>201701240943573_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
